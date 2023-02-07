@@ -1,0 +1,26 @@
+body {
+	min-width: 20rem;
+	font-size: 1rem;
+	color: #000;
+}
+
+.shell {
+	max-width: 67.25rem;
+	margin: 0 auto;
+
+	/* Mobile */
+	@media ($mobile) {
+		width: 100%;
+		padding: 0 2.9375rem;
+	}
+}
+
+main {
+	height: 100%;
+	width: 100%;
+	margin-top: 6.625rem;
+
+	@media ($mobile) {
+		margin-top: 4.5rem;
+	}
+}

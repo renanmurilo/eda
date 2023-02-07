@@ -1,0 +1,31 @@
+.btn {
+    width: 12.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font-roboto(1rem, 300);
+
+    @media ($mobile) {
+        width: 8.5rem;
+        height: 2rem;
+        font-size: 0.75rem;
+    }
+
+    &__primary {
+        background-color: $primary;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    &__outline__primary {
+        border: 0.0625rem solid $primary;
+        color: $primary;
+    }
+
+    &__outline__white {
+        color: $white;
+        border: 0.0625rem solid $white;
+    }
+}

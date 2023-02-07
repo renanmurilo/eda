@@ -1,0 +1,76 @@
+.footer {
+    /* ---- COOKIES -----*/
+
+    .box-cookies.hide {
+        display: none !important;
+    }
+
+    .box-cookies {
+        position: fixed;
+        background-color: $text;
+        width: 100%;
+        z-index: 998;
+        bottom: 0;
+        height: 11.875rem;
+        display: flex;
+        align-items: center;
+
+        @media ($mobile) {
+            justify-content: flex-start;
+            padding: 1.25rem 0;
+            height: 12.4375rem;
+        }
+
+        .container--cookies {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            @media ($mobile) {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .text {
+                width: 70%;
+
+                @media ($mobile) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+
+                h3 {
+                    @include font-ubuntu(1.625rem, 300);
+                    color: $white;
+                    margin-bottom: 1.25rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        margin-bottom: 0.75rem;
+                    }
+                }
+
+                .msg-cookies {
+                    @include font-roboto(1.25rem, 300);
+                    color: $white;
+                    line-height: 1.5rem;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                    }
+
+                    @media ($mobile) {
+                        text-align: left;
+                        font-size: 0.75rem;
+                        line-height: 1rem;
+                        width: 100%;
+                        margin-bottom: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---- COOKIES -----*/
+}
