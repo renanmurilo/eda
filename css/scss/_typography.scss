@@ -3,14 +3,5 @@
 ) {
     font-size: $font-size;
     font-weight: $font-weight;
-    font-family: 'Roboto Slab', serif;
-}
-
-@mixin font-ubuntu($font-size: 2.5rem,
-    $font-weight: 300,
-) {
-    font-size: $font-size;
-    font-weight: $font-weight;
-    font-family: 'Ubuntu', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
 }

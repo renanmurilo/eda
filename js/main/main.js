@@ -65,9 +65,9 @@ $('[data-group]').each(function () {
     btnCookies.addEventListener('click', acceptCookies);
 })();
 
-$(document).ready(function(){
-    $('.row__wrapper__slide .btn__wrapper').click(function(){
-        $('.btn__wrapper').removeClass("active");
-        $(this).addClass("active");
-    });
-});
+// $(document).ready(function(){
+//     $('.row__wrapper__slide .btn__wrapper').click(function(){
+//         $('.btn__wrapper').removeClass("active");
+//         $(this).addClass("active");
+//     });
+// });

@@ -1,94 +1,92 @@
     <?php $home = get_page_by_title('Home'); ?>
-    <?php $idioma = get_locale();?>
 
     <footer class="footer">
-        <div class="content__footer">
-            <div class="shell">
-                <div class="inner__footer">
-                    <div class="grid__footer">
-                        <a href="<?php echo get_home_url(); ?>/" class="logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Alma Law">
-                        </a>
-
-                        <div class="endereco">
-                            <p><?php the_field('endereco_1', $home); ?></p>
-                            <p><?php the_field('endereco_2', $home); ?></p>
+        <div class="shell">
+            <div class="content__footer">
+                <div class="row__wrapper">
+                    <div class="sociais">
+                        <div class="logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Eda">
                         </div>
-                    </div>
 
-                    <div class="grid__footer">
-                         <?php if ($idioma === 'pt_BR') : ?>
-                        <h3>Contato</h3>
-                        <?php elseif ($idioma === 'en_US') : ?> 
-                        <h3>CONTACT</h3>
-                        <?php endif ?>
-                        
-                        <div class="redes__sociais">
-                            <a href="<?php the_field('link_instagram', $home); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/ico-instagram.svg" alt="Instagram">
+                        <div class="icons">
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
                             </a>
-                            <a href="<?php the_field('link_linkedin', $home); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/ico-linkedin.svg" alt="Linkedin">
+
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
+                            </a>
+
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Instagram">
                             </a>
                         </div>
+                    </div>
 
-                        <div class="phone">
-                            <a href="mailto:" class="link"><?php the_field('email', $home); ?></a>
-                            <a href="tel:+" class="link"><?php the_field('telefone', $home); ?></a>
+                    <div class="menu__footer">
+                         <ul class="list__menu">
+                            <li class="item__menu">
+                                <a href="">Seja um representante</a>
+                            </li>
+
+                            <li class="item__menu">
+                                <a href="">Dúvidas frequentes</a>
+                            </li>
+
+                            <li class="item__menu">
+                                <a href="">Política de privacidade</a>
+                            </li>
+
+                            <li class="item__menu">
+                                <a href="">Termos de uso</a>
+                            </li>
+                        </ul>
+
+                        <div class="contato">
+                            <h3>Contato</h3>
+
+                            <a href="tel:+551133111990" class="link">+ 55 11 3311-1990</a>
+                            <a href="mailto:impeda@impeda.com.br" class="link">impeda@impeda.com.br</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row__wrapper">
+                    <div class="sociais">
+                        <div class="logo__skutt">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-skutt.svg" alt="Skutt">
+                        </div>
+
+                        <div class="icons">
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
+                            </a>
+
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
+                            </a>
                         </div>
                     </div>
 
-                    <div class="grid__footer">
-                        <?php if ($idioma === 'pt_BR') : ?>
-                        <h3>Institucional</h3>
-                        <?php elseif ($idioma === 'en_US') : ?> 
-                        <h3>INSTITUTIONAL</h3>
-                        <?php endif ?>
-
-                        <div class="links">
-                            <?php if ($idioma === 'pt_BR') : ?>
-                            <a href="http://" class="link">Políticas do escritório</a>
-                            <a href="<?php echo get_home_url(); ?>/termo-de-privacidade/" class="link">Aviso de privacidade</a>
-                            <?php elseif ($idioma === 'en_US') : ?> 
-                            <a href="http://" class="link">Office policies</a>
-                            <a href="<?php echo get_home_url(); ?>/privacy-term" class="link">Privacy notice</a>
-                            <?php endif ?>
-                        </div>
+                    <div class="endereco">
+                        <p>Av. Emb. Macedo Soares, 10.735, Espace Center galpão 28 - 05095-035 - São Paulo, SP</p>
                     </div>
+                </div>
 
-                    <div class="grid__footer">
-                        <?php if ($idioma === 'pt_BR') : ?>
-                        <h3>INSCREVA-SE EM NOSSA NEWSLETTER</h3>
-                        <?php elseif ($idioma === 'en_US') : ?> 
-                        <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-                        <?php endif ?>
-                        
-                        <?php echo do_shortcode('[contact-form-7 id="52" title="Newsletter"]'); ?>
-                    </div>
+                <div class="copy">
+                    <p>Copyright 2022 Importadora Eda</p> <a href="http://" target="_blank" rel="noopener noreferrer">Design by Eólica</a>
                 </div>
             </div>
         </div>
-
-        <div class="copy">
-            <a href="http://" target="_blank" rel="noopener noreferrer">Design by Eólica</a>
-            <p>Copyright 2022 @Alma Law</p>
-        </div>
+        
         <div class="box-cookies hide">
             <div class="shell">
                 <div class="container--cookies">
-                    <?php if ($idioma === 'pt_BR') : ?>
                     <div class="text">
-                        <h3>ESTE SITE USA COOKIES</h3>
-                        <p class="msg-cookies">Usamos cookies no nosso site para ver como você interage com ele. Ao aceitar, você concorda com o uso de cookies. </p>
+                        <p class="msg-cookies">Utilizamos cookies para melhorar a sua experiência em nosso site. Ao continuar navegando você concorda com a nossa <a href="<?php echo get_home_url(); ?>/politica-de-privacidade">política de privacidade</a>. </p>
                     </div>
-                    <button class="btn btn__outline__white btn-cookies">Eu aceito</button>
-                    <?php elseif ($idioma === 'en_US') : ?> 
-                     <div class="text">
-                        <h3>THIS SITE USES COOKIES</h3>
-                        <p class="msg-cookies">We use cookies on our website to see how you interact with it. By accepting, you agree to the use of cookies. </p>
-                    </div>
-                    <button class="btn btn__outline__white btn-cookies">I accept</button>
-                    <?php endif ?>
+                    <button class="btn btn__primary btn-cookies">CONTINUAR E FECHAR</button>
                 </div>
             </div>
 		</div>

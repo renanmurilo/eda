@@ -5,7 +5,7 @@ body {
 }
 
 .shell {
-	max-width: 67.25rem;
+	max-width: 67.6044rem;
 	margin: 0 auto;
 
 	/* Mobile */
@@ -18,7 +18,8 @@ body {
 main {
 	height: 100%;
 	width: 100%;
-	margin-top: 6.625rem;
+	// margin-top: 8.875rem;
+	margin-top: 30rem;
 
 	@media ($mobile) {
 		margin-top: 4.5rem;

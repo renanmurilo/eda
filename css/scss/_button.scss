@@ -1,11 +1,13 @@
 .btn {
-    width: 12.5rem;
+    width: 10.625rem;
     height: 2.5rem;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include font-roboto(1rem, 300);
+    border: none;
+    @include font-roboto(1.125rem, 500);
+    text-transform: uppercase;
 
     @media ($mobile) {
         width: 8.5rem;
@@ -14,8 +16,8 @@
     }
 
     &__primary {
-        background-color: $primary;
-        color: $white;
+        background-color: $yellow;
+        color: $black;
         text-transform: uppercase;
     }
 
