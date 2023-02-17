@@ -1,0 +1,199 @@
+.section__banner {
+    width: 100%;
+
+    .content__banner {
+        width: 100%;
+
+        .image__desktop {
+            width: 100%;
+            object-fit: cover;
+
+            @media ($mobile) {
+                display: none;
+            }
+        }
+
+        .image__mobile {
+            display: none;
+
+            @media ($mobile) {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.section__nossa__historia__slider {
+    width: 100%;
+    padding: 4.9525rem 0 0;
+
+    .content__nossa__historia__slider {
+        width: 100%;
+
+        h2 {
+            @include title-destaque;
+        }
+
+        .inner__nossa__historia__slider {
+            width: 100%;
+            margin: 3.5625rem 0 1.9375rem;
+
+            .owl-stage {
+                border-top: 0.0625rem solid $black;
+                padding-top: 1.25rem;
+                left: -27rem;
+                margin-top: .7rem;
+
+                &::before {
+                    content: '';
+                    width: 10.625rem;
+                    height: 0.125rem;
+                    background-color: $white;
+                    position: absolute;
+                    left: 0;
+                    top: -0.125rem;
+                }
+            }
+
+            .owl-item {
+                &:last-child {
+                    &::after {
+                        content: '';
+                        width: 14.625rem;
+                        height: 1.125rem;
+                        background-color: #fff;
+                        position: absolute;
+                        right: -9rem;
+                        top: -2.125rem;
+                    }
+                }
+            }
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 21rem;
+
+                &::before {
+                    content: '';
+                    width: 1.3125rem;
+                    height: 1.3125rem;
+                    border: 0.0625rem solid $black;
+                    border-radius: 100%;
+                    position: absolute;
+                    background-color: $white;
+                    z-index: 1;
+                    top: -2rem;
+                }
+
+                h3 {
+                    @include font-roboto(1.875rem, 700);
+                    color: $black;
+                    margin-bottom: 0.625rem;
+                }
+
+                .text {
+                    width: 100%;
+
+                    p {
+                        @include font-roboto(1.5rem, 300);
+                        color: $black;
+                        line-height: 2rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section__nossa__historia {
+    width: 100%;
+    background-image: url(http://eda.local/wp-content/uploads/2023/02/fundo-nossa-historia-desktop.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 44.125rem;
+    margin-bottom: 4.5rem;
+
+    .content__nossa__historia {
+        width: 100%;
+
+        h1 {
+            padding-top: 9.625rem;
+            @include font-roboto(1.875rem, 700);
+            color: $black;
+            max-width: 27.4375rem;
+            line-height: 2.375rem;
+            margin-bottom: 2.1875rem;
+        }
+
+        .text {
+            max-width: 27.4375rem;
+
+            &:last-child {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                line-height: 2rem;
+                margin-bottom: 3.125rem;
+            }
+        }
+    }
+}
+
+.section__nossas__marcas {
+    width: 100%;
+
+    .content__nossas__marcas {
+        width: 100%;
+
+        h2 {
+            @include title-destaque;
+        }
+
+        .inner__nossas__marcas {
+            margin: 4.9375rem 0 1.5375rem;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            .row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 61.5625rem;
+                margin: auto auto 6rem;
+
+                .description {
+                    max-width: 32.6756rem;
+
+                    h3 {
+                        @include font-roboto(1.875rem, 700);
+                        color: $black;
+                        margin-bottom: 2rem;
+                    }
+
+                    .text {
+                        width: 100%;
+
+                        p {
+                            @include font-roboto(1.5rem, 300);
+                            line-height: 2rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

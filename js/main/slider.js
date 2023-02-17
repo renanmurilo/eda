@@ -42,15 +42,26 @@ $(document).ready(function() {
         }
     });
 
-    $('.slider-atuacao').addClass("owl-carousel").owlCarousel({
-        items:2,
+    $('.slider-nossa-historia').addClass("owl-carousel").owlCarousel({
+        items: 4,
+        nav: false, 
+        dots: false,
         loop:false,
         center:true,
-        margin:40,
+        margin: 132,
         URLhashListener:true,
         autoplayHoverPause:true,
-        startPosition: 'URLHash',
-        autoWidth: true,
+        startPosition: 'URLHash'
+    });
+
+    var owl = $('.slider-nossa-historia');
+    owl.on("mousewheel", ".owl-stage", function (e) {
+      if (e.originalEvent.wheelDelta > 0) {
+        owl.trigger("prev.owl");
+      } else {
+        owl.trigger("next.owl");
+      }
+      e.preventDefault();
     });
 })
 

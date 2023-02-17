@@ -5,3 +5,31 @@
     font-weight: $font-weight;
     font-family: 'Roboto', sans-serif;
 }
+
+@mixin title-destaque($font-size: 2.125rem,
+    $font-weight: 700,
+    $text-uppercase: uppercase,
+    $text-align: center,
+) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: 'Roboto', sans-serif;
+    text-transform: $text-uppercase;
+    text-align: $text-align;
+    color: $black;
+    line-height: 2.375rem;
+    position: relative;
+    padding-bottom: 0.6875rem;
+
+    &::before {
+        content: '';
+        width: 11.125rem;
+        height: 0.1875rem;
+        background-color: $yellow;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        left: -0.125rem;
+        margin: auto;
+    }
+}
