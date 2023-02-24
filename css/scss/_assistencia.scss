@@ -1,0 +1,203 @@
+.section__banner__assistencia {
+    width: 100%;
+    background-image: url(http://eda.local/wp-content/uploads/2023/02/banner-assistencia.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    // height: 100%;
+
+    .content__banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 7.75rem 0 7.625rem;
+
+        h1 {
+            @include font-roboto(2.125rem, 700);
+            color: $black;
+            text-transform: uppercase;
+            line-height: 2.375rem;
+            margin-bottom: 1.5625rem;
+        }
+
+        p {
+            @include font-roboto(1.5rem, 300);
+            color: $black;
+            line-height: 2rem;
+        }
+
+        .wrapper__buttons {
+            margin-top: 2.6875rem;
+            display: flex;
+            align-items: center;
+
+            .btn__black {
+                width: 17.0625rem;
+                height: 3.5rem;
+                margin-right: 1rem;
+                border-radius: 0.125rem;
+            }
+        }
+    }
+}
+
+.section__content__assistencia {
+    width: 100%;
+    position: relative;
+    padding-top: 3.5263rem;
+
+    .content__assistencia {
+        width: 100%;
+        margin-top: 3.625rem;
+
+        h2 {
+            @include font-roboto(1.875rem, 700);
+            color: $black;
+            max-width: 33.125rem;
+            line-height: 2.375rem;
+            margin-bottom: 2.8119rem;
+        }
+
+        .text {
+            max-width: 33.125rem;
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                line-height: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .image__desktop {
+        position: absolute;
+        top: 3.5263rem;
+        right: 0;
+    }
+
+    .encontre__assistencia {
+        margin: 11.3438rem 0 12.2063rem;
+
+        h2 {
+            @include title-destaque;
+        }
+
+        .inner__assistencia {
+            margin-top: 4.6894rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            details {
+                background-color: $yellow;
+                max-width: 55.875rem;
+                width: 100%;
+                margin: auto auto 1.25rem;
+                padding: 1.0625rem 2.1875rem 1.4375rem 3.2125rem;
+                transition: all 1s !important;
+
+                &[open] {
+                    transition: all 2s !important;
+
+                    summary {
+                        margin-bottom: 1.1563rem;
+
+                        .icon {
+                            img {
+                                transform: rotate(-180deg);
+                                transition: all .4s
+                            }
+                        }
+                    }
+                }
+
+                summary {
+                    width: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    h3 {
+                        @include font-roboto(1.75rem, 700);
+                        color: $black;
+                        text-transform: uppercase;
+                        line-height: 2rem;
+                    }
+
+                    .icon {
+                        position: absolute;
+                        right: 1.25rem;
+                        top: 0.625rem;
+                        bottom: 0;
+                        margin: auto;
+
+                        img {
+                            transform: rotate(0);
+                            transition: all .4s
+                        }
+                    }
+                }
+
+                h4 {
+                    @include font-roboto(1.125rem, 700);
+                    color: $black;
+                    border-top: 0.0625rem solid $black;
+                    padding-top: 1rem;
+                    margin: .7rem 0 2rem;
+                }
+
+                .content__details {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 6.625rem;
+                    width: 100%;
+
+                    h5 {
+                        @include font-roboto(0.875rem, 700);
+                        color: $black;
+                        margin-bottom: 0.375rem;
+                        max-width: 13.125rem;
+                    }
+
+                    .descricao__loja {
+                        max-height: 5.625rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                        flex-wrap: wrap;
+                        align-content: baseline;
+
+                        .text {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            margin-bottom: 0.3125rem;
+
+                            &:last-child {
+                                max-width: 9.375rem;
+                                margin-left: 3.75rem;
+                            }
+
+
+                            h6 {
+                                @include font-roboto(0.875rem, 700);
+                                color: $black;
+                            }
+
+                            p {
+                                @include font-roboto(0.875rem, 300);
+                                color: $black;
+                                margin-left: 0.3125rem;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

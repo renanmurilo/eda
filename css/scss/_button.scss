@@ -25,4 +25,12 @@
         background-color: $black;
         color: $yellow;
     }
+
+    &__outline__black {
+        border: 0.0625rem solid $black;
+        color: $black;
+        width: 17.0625rem;
+        height: 3.5rem;
+        border-radius: 0.125rem;
+    }
 }
