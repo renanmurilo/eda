@@ -22,12 +22,26 @@ get_header();
                 </div>
             </section>
 
-            <section class="section__fornos">
+            <section class="section__unidades__fornos">
                 <div class="shell">
                     <div class="content__fornos">
                         <h2>Fornos</h2>
 
-                        <div class="inner__fornos"></div>
+                        <div class="inner__fornos">
+                            <?php
+                                $args = array (
+                                    'post_type' => 'forno',
+                                    'order' => 'DESC',
+                                    'showposts' => 16,
+                                );
+                                $the_query = new WP_Query ( $args );
+                            ?>
+
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                <?php include(TEMPLATEPATH . '/include/post.php'); ?>
+                            <?php endwhile; else : endif; ?>
+                            <?php  wp_reset_postdata(); ?>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -39,7 +53,7 @@ get_header();
 
                         <div class="inner__precos">
                             <div class="header__precos">
-                                <h2>Preços</h2>
+                                <h5>Preços</h5>
                             </div>
 
                             <table>
@@ -58,7 +72,7 @@ get_header();
                                 <tbody>
                                     <?php if(have_rows('lista_de_precos')): while(have_rows('lista_de_precos')) : the_row(); ?>
                                     <tr>
-                                        <td><?php the_sub_field('modelo'); ?></td>
+                                        <td><a href="<?php the_sub_field('link_do_produto'); ?>"><?php the_sub_field('modelo'); ?></a></td>
                                         <td><?php the_sub_field('automatico_km'); ?></td>
                                         <td><?php the_sub_field('touch_kmt'); ?></td>
                                         <td><?php the_sub_field('cone'); ?></td>
@@ -88,7 +102,7 @@ get_header();
                                     <img src="<?php the_sub_field('icone'); ?>" alt="<?php the_sub_field('titulo'); ?>">
                                 </div>
 
-                                <div class="text">
+                                <div class="description">
                                     <h3><?php the_sub_field('titulo'); ?></h3>
                                     <div class="text">
                                         <?php the_sub_field('texto'); ?>

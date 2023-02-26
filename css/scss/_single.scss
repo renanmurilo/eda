@@ -1,0 +1,267 @@
+.section__dados {
+    width: 100%;
+    padding-top: 2.625rem;
+
+    .content__dados {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .image {
+            max-width: 32.125rem;
+            height: 30.75rem;
+            border: 0.0625rem solid $yellow;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+
+            .icon {
+                position: absolute;
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
+        }
+
+        .aside__bar {
+            max-width: 28.4375rem;
+
+            h1 {
+                @include font-roboto(3.125rem, 700);
+                color: $black;
+                line-height: 3.125rem;
+                margin-bottom: 1.4375rem;
+                max-width: 24.3125rem;
+            }
+
+            h2 {
+                @include font-roboto(1.75rem, 700);
+                color: $black;
+                text-transform: uppercase;
+                margin-bottom: 2.5rem;
+            }
+
+            .text {
+                width: 100%;
+                margin-bottom: 3rem;
+
+                p {
+                    @include font-roboto(1.5rem, 300);
+                    color: $black;
+                    line-height: 2rem;
+                }
+            }
+
+            .link {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.section__dimensoes {
+    width: 100%;
+
+    .content__dimensoes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .description {
+            margin-top: 6.2969rem;
+            width: 100%;
+            max-width: 29.7188rem;
+
+            h2 {
+                @include font-roboto(1.875rem, 700);
+                color: $black;
+                text-transform: uppercase;
+                padding-bottom: 0.7344rem;
+                position: relative;
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    height: 0.1875rem;
+                    background-color: $yellow;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            .medidas {
+                margin-top: 2.3294rem;
+                display: flex;
+
+                .medida__externa {
+                    width: 100%;
+                    max-width: 16.0625rem;
+                    height: 8.875rem;
+                    margin-right: 1rem;
+
+                    h3 {
+                        @include font-roboto(1.375rem, 700);
+                        color: $black;
+                        text-transform: uppercase;
+                        margin-bottom: 2rem;
+                    }
+
+                    .externa {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+
+                        p {
+                            @include font-roboto(1.5rem, 300);
+                            color: $black;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+
+                .medida__interna {
+                    width: 100%;
+                    max-width: 14.25rem;
+
+                    h3 {
+                        @include font-roboto(1.375rem, 700);
+                        color: $black;
+                        text-transform: uppercase;
+                        margin-bottom: 2rem;
+                    }
+
+                    .internas {
+                        width: 100%;
+
+                        .text {
+                            display: flex;
+
+                            h3 {
+                                @include font-roboto(1.25rem, 700);
+                                color: $black;
+                                margin-right: 0.625rem;
+                                text-transform: initial
+                            }
+
+                            p {
+                                @include font-roboto(1.5rem, 300);
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .image {
+            max-width: 28.4375rem;
+            width: 100%;
+            border: 0.125rem solid $yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.section__descricao {
+    width: 100%;
+    margin: 4rem auto 7.5rem;
+
+    .content__descricao {
+        width: 100%;
+
+        h2 {
+            @include font-roboto(2.125rem, 700);
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 1.9375rem;
+        }
+
+        .text {
+            width: 100%;
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+.section__informacoes__produto {
+    width: 100%;
+
+    .content__informacoes {
+        width: 100%;
+
+        h2 {
+            @include font-roboto(2.125rem, 700);
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 1.9219rem;
+        }
+
+        .inner__informacoes {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 4.5rem;
+
+            .row {
+                width: 100%;
+                // min-height: 3.375rem;
+                padding: 0.875rem 0 1rem;
+                background-color: $background;
+                padding-left: 2.375rem;
+                display: flex;
+                align-items: center;
+
+                &:nth-child(even) {
+                    background-color: transparent;
+                }
+
+                .title {
+                    width: 100%;
+                    max-width: 8.125rem;
+                    margin-right: 6.25rem;
+
+                    h3 {
+                        @include font-roboto(1.25rem, 700);
+                        color: $black;
+                    }
+                }
+
+                p {
+                    @include font-roboto(1.25rem, 300);
+                    color: $black;
+                    line-height: 2rem;
+                    max-width: 28rem;
+                }
+            }
+        }
+    }
+
+    .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 7.4794rem;
+
+        .btn__primary {
+            width: 21.75rem;
+            height: 3.5rem;
+        }
+    }
+}
