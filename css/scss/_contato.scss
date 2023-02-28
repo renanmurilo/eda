@@ -1,0 +1,414 @@
+.separador {
+    padding-top: 3.0313rem;
+}
+
+.banner__contato {
+    width: 100%;
+    background-image: url(http://eda.local/wp-content/uploads/2023/02/fundo-banner-contato.png);
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 25.25rem;
+
+    .content__banner__contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 6.8281rem;
+
+        h1 {
+            @include font-roboto(2.125rem, 700);
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: 1.7031rem;
+        }
+
+        p {
+            @include font-roboto(1.5rem, 300);
+            color: $black;
+            margin-bottom: 1.6875rem;
+        }
+
+        .row__buttons {
+            display: flex;
+
+            .btn__outline__black {
+                margin: auto 0.5rem;
+                height: 3.5rem;
+                width: 16.0625rem;
+
+                &.active {
+                    background-color: $yellow;
+                    border: none;
+                    color: $black;
+                }
+            }
+        }
+
+        .wrapper__ferramentas {
+            display: none;
+            margin-top: 5.8125rem;
+            justify-content: center;
+
+            &.active {
+                display: flex;
+            }
+
+            .btn__wrapper {
+                width: 100%;
+                max-width: 16.0625rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .btn__form {
+                    @include font-roboto(1.125rem, 700);
+                    color: $black;
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: 1.5rem;
+                    position: relative;
+
+                    &.active {
+                        &::after {
+                            content: '';
+                            width: 0.6875rem;
+                            height: 0.6875rem;
+                            background-color: $black;
+                            position: absolute;
+                            top: -2.09rem;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        border: 0.0625rem solid $black;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: -2.3rem;
+                        height: 1.1875rem;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 1.1875rem;
+                    }
+                }
+
+                p {
+                    @include font-roboto(1rem, 300);
+                    color: $black;
+                    margin-top: 0.8087rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .wrapper__fornos {
+            display: none;
+            margin-top: 5.8125rem;
+            justify-content: center;
+
+            &.active {
+                display: flex;
+            }
+
+            .btn__wrapper {
+                width: 100%;
+                max-width: 16.0625rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .btn__form {
+                    @include font-roboto(1.125rem, 700);
+                    color: $black;
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: 1.5rem;
+                    position: relative;
+
+                    &.active {
+                        &::after {
+                            content: '';
+                            width: 0.6875rem;
+                            height: 0.6875rem;
+                            background-color: $black;
+                            position: absolute;
+                            top: -2.09rem;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        border: 0.0625rem solid $black;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: -2.3rem;
+                        height: 1.1875rem;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 1.1875rem;
+                    }
+                }
+
+                p {
+                    @include font-roboto(1rem, 300);
+                    color: $black;
+                    margin-top: 0.8087rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .formularios {
+            display: none;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 5.5625rem;
+
+            &.active {
+                display: flex;
+            }
+
+            .box__form {
+                background-image: url(http://eda.local/wp-content/uploads/2023/02/box-whats.png);
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 40.25rem;
+                width: 16.0625rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .image {
+                    padding-top: 4.3319rem;
+                    margin-bottom: 1.25rem;
+                }
+
+                h3 {
+                    @include font-roboto(1.125rem, 300);
+                    color: $black;
+                    margin-bottom: 2rem;
+                    text-decoration: underline;
+                    max-width: 13.25rem;
+                    text-align: center;
+                    line-height: 1.5rem;
+                }
+
+                a {
+                    @include font-roboto(0.9375rem, 300);
+                    color: $black;
+                }
+            }
+
+            .form__class {
+                width: 100%;
+                max-width: 38.8125rem;
+
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    max-width: 38.8125rem;
+
+                    .form__row {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        &.recaptcha {
+                            justify-content: flex-start;
+                            flex-wrap: wrap;
+
+                            &>div {
+                                width: 100%;
+                            }
+
+                            .btn__primary {
+                                margin: auto 0;
+                                height: 3.5rem;
+                                width: 11.625rem;
+                            }
+                        }
+
+                        &.button {
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            p {
+                                width: 100%;
+                                @include font-roboto(0.9375rem, 400);
+                                color: $black;
+                                text-align: center;
+                            }
+
+                            .btn__primary {
+                                margin: 2rem auto 0;
+                                height: 3.5rem;
+                                width: 11.625rem;
+                            }
+                        }
+
+                        .form__controls {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-bottom: 1.325rem;
+
+                            p {
+                                padding: 0;
+                                margin: 0 0 .2rem;
+                                @include font-roboto(0.875rem, 300);
+                                color: $black;
+                            }
+
+                            &.w45 {
+                                width: 49%;
+                            }
+
+                            .btn__arquivo {
+                                display: flex;
+                                height: 3.5rem;
+                                background-color: $yellow;
+                                font-size: 0;
+                                width: 13.915rem;
+                                margin-bottom: 0.7638rem;
+
+                                &::before {
+                                    content: 'SELECIONAR ARQUIVO';
+                                    height: 3.5rem;
+                                    background-color: $yellow;
+                                    width: 13.915rem;
+                                    position: relative;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    @include font-roboto(1.125rem, 700);
+                                    color: $black;
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            .label__field {
+                                @include font-roboto(0.875rem, 700);
+                                color: $black;
+                            }
+
+                            .field {
+                                width: 100%;
+                                border: 0.125rem solid $border;
+                                border-radius: 0.125rem;
+                                height: 3rem;
+                                padding-left: 1rem;
+                                @include font-roboto(0.875rem, 700);
+                                color: $black;
+
+                                &[name="mensagem"] {
+                                    padding-top: 1rem;
+                                    height: 14.125rem;
+
+                                    @media ($mobile) {
+                                        height: 12.6875rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section__showroom {
+    margin-top: 3.5rem;
+    width: 100%;
+    background-image: url(http://eda.local/wp-content/uploads/2023/02/fundo-showroom-desktop.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 29.1875rem;
+
+    .content__showroom {
+        width: 100%;
+
+        h2 {
+            @include font-roboto(2.125rem, 700);
+            text-transform: uppercase;
+            color: $black;
+            margin-bottom: 2.5rem;
+            padding-top: 8rem;
+        }
+
+        .text {
+            width: 100%;
+            max-width: 25.25rem;
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+}
+
+.section__importadora__eda {
+    width: 100%;
+    background-image: url(http://eda.local/wp-content/uploads/2023/02/fundo-importadora-desktop.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 38.125rem;
+    margin-top: 7.5625rem;
+
+    .content__importadora__eda {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto 0 auto auto;
+        max-width: 33.125rem;
+        padding-top: 4.0625rem;
+
+        h2 {
+            @include font-roboto(2.125rem, 700);
+            color: $black;
+            text-transform: uppercase;
+            margin-bottom: 2.5625rem;
+        }
+
+        ul {
+            max-width: 17.5rem;
+            margin-bottom: 1rem;
+
+            li {
+                @include font-roboto(1.25rem, 700);
+                color: $black;
+                line-height: 2rem;
+            }
+        }
+
+        .text {
+            width: 100%;
+
+            p {
+                @include font-roboto(1.5rem, 300);
+                color: $black;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -49,6 +49,41 @@ $('[data-group]').each(function () {
     });
 });
 
+$('[data-grupo]').each(function () {
+    var $allTarget = $(this).find('[data-target]'),
+        $allClick = $(this).find('[data-click]'),
+        $viewForm = $(this).find('[data-form]'),
+        $click = $(this).find('[data-open]'),
+        activeClass = 'active';
+    
+
+    $allClick.click(function (e) {
+        e.preventDefault();
+
+        $allTarget.removeClass(activeClass);
+        $allClick.removeClass(activeClass);
+
+        var id = $(this).data('click'),
+            $target = $('[data-target="' + id + '"]');
+
+        $target.addClass(activeClass);
+        $(this).addClass(activeClass)
+    });
+
+    $click.click(function(e) {
+        e.preventDefault();
+
+        $viewForm.removeClass(activeClass);
+        $click.removeClass(activeClass);
+
+        var i = $(this).data('open'),
+            $teste = $('[data-form="' + i + '"]');
+
+        $teste.addClass(activeClass);
+        $(this).addClass(activeClass)
+    })
+});
+
 
 (() => {
     if (!localStorage.pureJavaScriptCookies) {

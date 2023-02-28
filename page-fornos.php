@@ -36,6 +36,9 @@ get_header();
                                 );
                                 $the_query = new WP_Query ( $args );
                             ?>
+                            <pre>
+                                <?php print_r($the_query->have_posts() ); ?>
+                            </pre>
 
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                                 <?php include(TEMPLATEPATH . '/include/post.php'); ?>
