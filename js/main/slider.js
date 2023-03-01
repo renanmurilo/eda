@@ -7,12 +7,25 @@ $(document).ready(function() {
         autoplay: true,
     });
 
-     $('.slide-post-destaque').addClass("owl-carousel").owlCarousel({
-        items: 1,
-        dots: true,
+     $('.slide-produto').addClass("owl-carousel").owlCarousel({
+        items: 5,
+        dots: false,
         nav: true,
         loop: true,
+        margin: 10,
         autoplay: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+            },
+            768:{
+                items:1,
+            },
+            1024: {
+              items: 5,
+            }
+        }
     });
 
     $('.slide-home-publicacoes').addClass("owl-carousel").owlCarousel({
@@ -51,7 +64,21 @@ $(document).ready(function() {
         margin: 132,
         URLhashListener:true,
         autoplayHoverPause:true,
-        startPosition: 'URLHash'
+        startPosition: 'URLHash',
+        responsive: {
+            0: {
+                items: 1,
+                center: false,
+                margin: 20,
+                autoplayHoverPause:false,
+            },
+            768:{
+                items:2,
+            },
+            1024: {
+              items: 4,
+            }
+        }
     });
 
     var owl = $('.slider-nossa-historia');

@@ -16,15 +16,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="section__home__novidades">
-                <div class="shell">
-                    <div class="content__novidades">
-                        <h1>Novidades</h1>
-
-                        <a href="" class="btn btn__primary">Veja todos os produtos</a>
-                    </div>
-                </div>
-            </section>
+            <?php include(TEMPLATEPATH . '/include/novidades.php'); ?>
 
             <section class="section__home__sobre">
                 <div class="shell">
@@ -70,25 +62,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="section__home__ferramentas">
-                <div class="shell">
-                    <div class="content__ferramentas">
-                        <h2>ENCONTRE FERRAMENTAS POR CATEGORIA</h2>
-                        
-                        <div class="inner__ferramentas">
-                            <?php if(have_rows('conteudo_categorias')): while(have_rows('conteudo_categorias')) : the_row(); ?>
-                            <a href="<?php the_sub_field('link'); ?>" class="icons">
-                                <div class="icon">
-                                    <img class="image__primary" src="<?php the_sub_field('icone_primario'); ?>" alt="">
-                                    <img class="image__secondary" src="<?php the_sub_field('icone_secundario'); ?>" alt="">
-                                </div>
-                                <h3><?php the_sub_field('titulo'); ?></h3>
-                            </a>
-                            <?php endwhile; else : endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <?php include(TEMPLATEPATH . '/include/encontre.php'); ?>
 
             <section class="section__fique__por__dentro">
                 <div class="shell">

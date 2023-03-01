@@ -2,21 +2,41 @@
     background-color: $black;
     height: 14.8094rem;
 
+    @media ($mobile) {
+        height: 33.9rem
+    }
+
     .content__footer {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         padding-top: 1.6444rem;
 
+        @media ($mobile) {
+            padding-top: 2.025rem;
+        }
+
         .row__wrapper {
             display: flex;
             align-items: flex-start;
             width: 100%;
 
-            .sociais {
+            @media ($mobile) {
+                flex-wrap: wrap;
+            }
+
+            .sociais__desktop__eda,
+            .sociais__desktop__skutt {
                 display: flex;
                 align-items: center;
                 margin-top: 0.5625rem;
+
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    width: 50%;
+                    flex-direction: column;
+                    margin-top: 0;
+                }
 
                 .logo {
                     max-width: 3.5425rem;
@@ -29,11 +49,58 @@
                 .icons {
                     margin-left: 3.175rem;
 
+                    @media ($mobile) {
+                        display: flex;
+                        margin-left: 0;
+                        margin-top: 0.7438rem;
+                    }
+
                     a {
                         margin-right: 2.375rem;
 
+                        @media ($mobile) {
+                            margin-right: 1.525rem;
+                        }
+
                         &:last-child {
                             margin-right: 0;
+                        }
+                    }
+                }
+            }
+
+            @media ($mobile) {
+                .sociais__desktop__skutt {
+                    display: none;
+                }
+            }
+
+            .sociais__mobile__skutt {
+                display: none;
+
+                @media($mobile) {
+                    display: flex;
+                    width: 50%;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .logo__skutt {
+                        margin-bottom: 1rem;
+                        margin-top: .2rem;
+                    }
+
+                    .icons {
+                        display: flex;
+                        margin-left: 0;
+                        margin-top: 0.5438rem;
+
+                        a {
+                            margin-right: 1.4875rem;
+
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
@@ -43,12 +110,48 @@
                 margin-left: 6.4375rem;
                 display: flex;
 
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    margin: 0;
+                    width: 100%;
+                    justify-self: center;
+                    margin-top: 2rem;
+                }
+
                 .list__menu {
                     display: flex;
                     flex-direction: column;
                     margin-right: 14rem;
 
+                    @media ($mobile) {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        margin-right: auto;
+                        justify-content: center;
+                        width: 100%;
+                    }
+
                     .item__menu {
+                        @media ($mobile) {
+                            width: 50%;
+
+                            &:nth-child(1) {
+                                order: 1;
+                            }
+
+                            &:nth-child(2) {
+                                order: 3;
+                            }
+
+                            &:nth-child(3) {
+                                order: 2;
+                            }
+
+                            &:nth-child(4) {
+                                order: 4;
+                            }
+                        }
+
                         a {
                             color: $white;
                             @include font-roboto(0.875rem, 400);
@@ -60,6 +163,13 @@
                 .contato {
                     display: flex;
                     flex-direction: column;
+
+                    @media ($mobile) {
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 2.4rem;
+                    }
 
                     h3 {
                         color: $white;
@@ -81,9 +191,20 @@
                 display: flex;
                 align-self: center;
 
+                @media ($mobile) {
+                    justify-content: center;
+                    margin-left: auto;
+                    margin-top: 2.4rem;
+                }
+
                 p {
                     color: $white;
                     @include font-roboto(0.875rem, 400);
+
+                    @media ($mobile) {
+                        text-align: center;
+                        line-height: 1.25rem;
+                    }
                 }
             }
         }
@@ -93,14 +214,29 @@
             justify-content: center;
             width: 100%;
 
+            @media ($mobile) {
+                flex-wrap: wrap;
+                margin-top: 2.4rem;
+            }
+
             p,
             a {
                 color: $white;
                 @include font-roboto(0.75rem, 400);
+
+                @media ($mobile) {
+                    width: 100%;
+                    text-align: center;
+                }
             }
 
             a {
                 margin-left: 1.125rem;
+
+                @media ($mobile) {
+                    margin-left: auto;
+                    margin-top: .8rem;
+                }
             }
         }
     }

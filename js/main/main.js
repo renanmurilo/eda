@@ -1,16 +1,15 @@
 // Toggle Menu
 let openMenu = document.querySelector('.open__menu');
-let ico = document.querySelector('.hamburguer-line')
 let menu = document.querySelector('.menu')
 let closeMenu = document.querySelector('.close__menu')
-let language = document.querySelector('.language')
 let logo = document.querySelector('.logo__mobile')
+
+console.log(menu);
 
 openMenu.addEventListener('click', (e) => {
     e.preventDefault();
 
     closeMenu.classList.toggle('active')
-    language.classList.toggle('active');
     openMenu.classList.toggle('active')
     menu.classList.toggle('active')
     logo.classList.toggle('active')
@@ -20,7 +19,6 @@ closeMenu.addEventListener('click', (e) => {
     e.preventDefault();
 
     openMenu.classList.toggle('active')
-    language.classList.toggle('active');
     closeMenu.classList.toggle('active')
     menu.classList.toggle('active');
     logo.classList.toggle('active')
@@ -84,8 +82,32 @@ $('[data-grupo]').each(function () {
     })
 });
 
+$(document).ready(function() {
+    const btnOrdenar = document.querySelector('.order__by form input[type="submit"]')
+    const formOrdenar =  document.getElementById('orderby');
 
-(() => {
+    $(formOrdenar).on('change', function() {
+        $(btnOrdenar).trigger('click')
+    })
+})
+
+$(document).ready(function() {
+    const current = document.querySelector('#current');
+    const imgs = document.querySelectorAll('.thumbs img');
+    const opacity = 0.4;
+
+    imgs[0].style.opacity = opacity;
+
+    imgs.forEach(img => img.addEventListener('click', imgClick));
+
+    function imgClick (e) {
+        imgs.forEach(img => (img.style.opacity = 1));
+        current.src = e.target.src;
+        current.classList.add('fade-in');
+        setTimeout(() => current.classList.remove('fade-in'), 500);
+        e.target.style.opacity = opacity;
+    }
+
     if (!localStorage.pureJavaScriptCookies) {
         document.querySelector(".box-cookies").classList.remove('hide');
     }
@@ -98,8 +120,7 @@ $('[data-grupo]').each(function () {
     const btnCookies = document.querySelector(".btn-cookies");
 
     btnCookies.addEventListener('click', acceptCookies);
-})();
-
+})
 // $(document).ready(function(){
 //     $('.row__wrapper__slide .btn__wrapper').click(function(){
 //         $('.btn__wrapper').removeClass("active");

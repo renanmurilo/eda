@@ -31,5 +31,14 @@
         right: 0;
         left: -0.125rem;
         margin: auto;
+
+        @media ($mobile) {
+            width: 9.5rem;
+        }
+    }
+
+    @media ($mobile) {
+        font-size: 1.75rem;
+        line-height: 2.375rem;
     }
 }

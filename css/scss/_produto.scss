@@ -1,6 +1,5 @@
 .section__banner {
     width: 100%;
-    padding-top: 1.5rem;
 
     .content__banner {
         display: flex;
@@ -10,6 +9,8 @@
         .galeria {
             width: 100%;
             max-width: 38.875rem;
+            display: flex;
+            justify-content: space-between;
 
             .thumbs {
                 display: flex;
@@ -19,107 +20,43 @@
                 .image {
                     max-width: 5.75rem;
                     width: 100%;
+                    height: 6.375rem;
                     margin-bottom: 2.6875rem;
+                    cursor: pointer;
+                    border: 0.0625rem solid $yellow;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
                     img {
-                        width: 100%;
+                        max-width: 100%;
+                        height: 100%;
                         object-fit: cover;
-                        border: 0.0625rem solid $yellow;
-                    }
-
-                }
-
-                .main-slider {
-                    width: 100%;
-
-                    .owl-stage {
-                        background-color: rgba(30, 144, 255, .8);
-                    }
-
-                    .owl-item {
-                        padding: 0;
-                        position: relative;
-                        opacity: .5;
-
-                        img {
-                            object-fit: cover;
-                            object-position: center;
-                            height: 450px;
-                        }
-                    }
-
-                    .center {
-                        opacity: 1;
-                        transform: scale(1.005);
-                        transition: .5s ease-in-out;
-                        z-index: 9999;
-                    }
-
-                    .owl-controls .owl-nav {
-                        position: absolute;
-                        width: 100%;
-                        top: 0;
-                        bottom: 0;
-
-                        .prev {
-                            position: absolute;
-                            height: 80%;
-                            width: 15%;
-                            left: 0;
-
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-
-                        .next {
-                            position: absolute;
-                            height: 80%;
-                            width: 15%;
-                            right: 0;
-
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                    .owl-thumbs {
-                        text-align: center;
-                        display: table;
-                        width: 100%;
-                    }
-
-                    .owl-thumb-item {
-                        width: 20%;
-                        height: 150px;
-                        border: none;
-                        background: none;
-                        padding: 0;
-                        opacity: .7;
-                        overflow: hidden;
-                    }
-
-                    .owl-thumb-item img {
-                        width: 100%;
-                        height: auto;
-                        vertical-align: middle;
-                    }
-
-                    .owl-thumb-item.active {
-                        opacity: 1;
-
-                        img {
-                            position: relative;
-                        }
                     }
                 }
+            }
 
-                .overlay {
-                    width: 100%;
+            .image__large {
+                width: 100%;
+                max-width: 32.125rem;
+                height: 33.5625rem;
+                border: 0.0625rem solid $yellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    bottom: 1.25rem;
+                    right: 1.25rem;
+                }
+
+                img {
+                    object-fit: cover;
                     height: 100%;
-                    display: block;
-                    background-color: black;
+                    max-width: 100%;
                 }
             }
         }
@@ -151,7 +88,7 @@
             }
 
             .especificacoes {
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
 
                 li {
                     display: flex;
@@ -193,6 +130,13 @@
         .image {
             width: 100%;
             margin-bottom: 1.625rem;
+            position: relative;
+
+            .icon {
+                position: absolute;
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
 
             img {
                 object-fit: cover;
@@ -308,6 +252,107 @@
 
         .inner__veja {
             margin-top: 2.7931rem;
+
+            .produto {
+                width: 11.9113rem;
+                height: 17.8319rem;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+
+                    .image {
+                        max-width: 100%;
+                        height: 13.6862rem;
+                        border: 0.0625rem solid $yellow;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+
+                    .description {
+                        margin-top: 1.145rem;
+
+                        h3 {
+                            @include font-roboto(1.25rem, 500);
+                            color: $black;
+                            text-transform: uppercase;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .owl-nav {
+                position: absolute;
+                top: 40%;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                @media ($tabletMin) and ($tabletMax) {}
+
+                .owl-prev {
+                    position: relative;
+                    left: -2.5rem;
+
+                    @media ($mobile) {
+                        left: -1rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.5rem;
+                        height: 0.25rem;
+                        background-color: $yellow;
+                        position: absolute;
+                        transform: rotate(-50deg);
+                        top: -0.4875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(50deg);
+                        top: 0.4875rem;
+                    }
+                }
+
+                .owl-next {
+                    position: relative;
+
+                    @media ($mobile) {
+                        right: 1rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 1.5rem;
+                        height: 0.25rem;
+                        background-color: $yellow;
+                        position: absolute;
+                        transform: rotate(50deg);
+                        top: -0.5875rem;
+                    }
+
+                    &::after {
+                        transform: rotate(-50deg);
+                        top: 0.4875rem;
+                    }
+                }
+            }
         }
     }
 }

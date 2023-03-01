@@ -15,6 +15,14 @@ get_header(); ?>
                         </div>
 
                         <div class="image__large">
+                            <?php $rows = get_field('imagens_do_produto');
+                                $first_row = $rows[0]; 
+                            ?>
+                            <img src="<?php print_r($first_row['imagem']); ?>" alt="" id="current">
+
+                            <a href="" class="icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down.svg" alt="icon">
+                            </a>
                         </div>
                     </div>
 
@@ -44,6 +52,10 @@ get_header(); ?>
                     <?php if(have_rows('imagens_destaque')): while(have_rows('imagens_destaque')) : the_row(); ?>
                     <div class="image">
                         <img src="<?php the_sub_field('imagem'); ?>" alt="">
+
+                        <div class="icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down-white.svg" alt="icon">
+                        </div>
                     </div>
                     <?php endwhile; else : endif; ?>
                 </div>
@@ -86,7 +98,7 @@ get_header(); ?>
                 <div class="content__veja">
                     <h2>Veja Também</h2>
 
-                     <?php
+                    <?php
                         $args = array (
                             'post_type' => 'produto',
                             'order' => 'DESC',
@@ -95,9 +107,10 @@ get_header(); ?>
                         );
                         $the_query = new WP_Query ( $args );
                     ?>
-                    <div class="inner__veja">
+                    
+                    <div class="inner__veja slide-produto">
                         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                            <?php include(TEMPLATEPATH . '/include/post.php'); ?>
+                            <?php include(TEMPLATEPATH . '/include/produto.php'); ?>
                         <?php endwhile; else : endif; ?>
                     </div>
                 </div>

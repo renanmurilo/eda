@@ -46,6 +46,10 @@
 							X
 						</a>
 
+						<a href="<?php echo get_home_url(); ?>" class="logo__mobile">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Eda">
+						</a>
+
                         <?php
                             $args = array(
                                 'menu' => 'principal',

@@ -4,7 +4,7 @@
         <div class="shell">
             <div class="content__footer">
                 <div class="row__wrapper">
-                    <div class="sociais">
+                    <div class="sociais__desktop__eda">
                         <div class="logo">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Eda">
                         </div>
@@ -20,6 +20,22 @@
 
                             <a href="" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="sociais__mobile__skutt">
+                        <div class="logo__skutt">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-skutt.svg" alt="Skutt">
+                        </div>
+
+                        <div class="icons">
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
+                            </a>
+
+                            <a href="" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
                         </div>
                     </div>
@@ -53,7 +69,7 @@
                 </div>
 
                 <div class="row__wrapper">
-                    <div class="sociais">
+                    <div class="sociais__desktop__skutt">
                         <div class="logo__skutt">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/logo-skutt.svg" alt="Skutt">
                         </div>

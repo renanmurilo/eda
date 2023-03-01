@@ -15,15 +15,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="section__home__novidades">
-                <div class="shell">
-                    <div class="content__novidades">
-                        <h1>Novidades</h1>
-
-                        <a href="" class="btn btn__primary">Veja todos os produtos</a>
-                    </div>
-                </div>
-            </section>
+            <?php include(TEMPLATEPATH . '/include/novidades.php'); ?>
 
             <section class="section__nossas__ferramentas">
                 <div class="shell">
@@ -45,7 +37,13 @@ get_header();
                 </div>
             </section>
 
+            <?php include(TEMPLATEPATH . '/include/encontre.php'); ?>
+
             <section class="section__catalogo">
+                <div class="image__mobile">
+                    <img src="<?php the_field('banner_catalogo_mobile'); ?>" alt="<?php the_field('titulo_catalogo'); ?>">
+                </div>
+                
                 <div class="shell">
                     <div class="content__catalogo">
                         <h2><?php the_field('titulo_catalogo'); ?></h2>

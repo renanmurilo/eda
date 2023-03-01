@@ -1,23 +1,13 @@
 <?php
 get_header();
-/* Template Name: Categoria */
+/* Template Name: Produtos */
 ?>
     <main>
         <section class="section__header__category">
             <div class="shell">
                 <div class="content__header__category">
                     <h1>
-                        <?php 
-                            $category_id = get_query_var('cat'); 
-                            $args = array( 
-                                'post_type' => 'produto', 
-                                'cat' => $category_id, 
-                            ); 
-
-                            $query = new WP_Query( $args ); 
-                            $category_name = get_cat_name( $category_id ); 
-                            echo $category_name
-                        ?>
+                        Ferramentas
                     </h1>
 
                     <div class="order__by">
@@ -59,26 +49,23 @@ get_header();
                                 'container' => false,
                             ]);
                         ?>
-                        
                     </aside>
 
                     <div class="inner__category">
-                        <?php 
+                        <?php
                             $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'title';
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                            $category_id = get_query_var('cat'); 
-                            $args = array( 
-                                'post_type' => 'produto', 
-                                'cat' => $category_id, 
-                                'posts_per_page' => 9,
+                            $args = array (
+                                'post_type' => 'produto',
+                                'order' => 'DESC',
                                 'orderby' => $orderby,
+                                'posts_per_page' => 9,
                                 'paged' => $paged,
-                            ); 
+                            );
+                            $the_query = new WP_Query ( $args );
+                        ?>
 
-                            $query = new WP_Query( $args ); 
-                        ?> 
-
-                        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+                        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <?php include(TEMPLATEPATH . '/include/produto-category.php'); ?>
                         <?php endwhile; ?>
                              <div class="pagination">
@@ -87,7 +74,7 @@ get_header();
                                         'base' => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
                                         'format' => '?paged=%#%',
                                         'current' => max( 1, get_query_var('paged') ),
-                                        'total' => $query->max_num_pages
+                                        'total' => $the_query->max_num_pages
                                     ) );
                                 ?>
                             </div>
