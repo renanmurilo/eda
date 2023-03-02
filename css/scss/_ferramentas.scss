@@ -127,8 +127,13 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 467px;
+    height: 29.1875rem;
     margin: 8.9688rem auto 6.125rem;
+
+    @media ($desktopLarge) {
+        height: 41rem;
+        margin-bottom: 8rem;
+    }
 
     @media ($mobile) {
         background-image: none;
@@ -163,6 +168,10 @@
             line-height: 2.375rem;
             margin-bottom: 1.25rem;
             padding-top: 9.9063rem;
+
+            @media ($desktopLarge) {
+                padding-top: 15rem;
+            }
 
             @media ($mobile) {
                 max-width: 19.5rem;
@@ -219,6 +228,10 @@
     background-size: cover;
     height: 24.8125rem;
 
+    @media ($desktopLarge) {
+        height: 34.7rem;
+    }
+
     @media ($mobile) {
         background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-representantes-mobile.png);
         background-size: 100%;
@@ -242,6 +255,10 @@
             color: $black;
             text-transform: uppercase;
             margin: 4.4375rem 0 1.25rem;
+
+            @media ($desktopLarge) {
+                margin-top: 10rem;
+            }
 
             @media ($mobile) {
                 margin: 4.4069rem 0 1.25rem;

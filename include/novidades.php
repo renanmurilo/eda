@@ -4,7 +4,7 @@
             <h1>Novidades</h1>
             <?php 
                 $args = array( 
-                    'post_type' => 'produto', 
+                    'post_type' => 'ferramentas', 
                     'cat' => 'novidades', 
                 ); 
 
@@ -18,7 +18,7 @@
                 <?php  wp_reset_postdata(); ?>
             </div>
 
-            <a href="/produtos/?orderby=date" class="btn btn__primary">Veja todos os produtos</a>
+            <a href="<?php echo get_home_url(); ?>/ferramentas/?orderby=date" class="btn btn__primary">Veja todos os produtos</a>
         </div>
     </div>
 </section>

@@ -1,8 +1,9 @@
 <?php
 get_header();
-/* Template Name: Categoria */
 ?>
     <main>
+        <?php include(TEMPLATEPATH . '/include/breadcrumb.php'); ?>
+
         <section class="section__header__category">
             <div class="shell">
                 <div class="content__header__category">
@@ -96,7 +97,7 @@ get_header();
                             $taxonomy = get_queried_object();
                             $term_id = $taxonomy->term_id;
                             $args = array( 
-                                'post_type' => 'produto', 
+                                'post_type' => 'ferramentas', 
                                 'posts_per_page' => 9,
                                 'orderby' => $orderby,
                                 'paged' => $paged,

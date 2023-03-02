@@ -4,11 +4,7 @@ get_header();
 ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
         <main>
-            <section class="section__breadcrumb">
-                <div class="shell">
-                    <div class="content__breadcrumb"></div>
-                </div>
-            </section>
+            <?php include(TEMPLATEPATH . '/include/breadcrumb.php'); ?>
 
             <section class="section__unidades__fornos">
                 <div class="shell">

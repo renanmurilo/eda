@@ -3,6 +3,13 @@ get_header();
 /* Template Name: Categoria */
 ?>
     <main>
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+<?php
+if(function_exists('bcn_display'))
+{
+bcn_display();
+}?>
+</div>
         <section class="section__header__category">
             <div class="shell">
                 <div class="content__header__category">
@@ -10,7 +17,7 @@ get_header();
                         <?php 
                             $category_id = get_query_var('cat'); 
                             $args = array( 
-                                'post_type' => 'produto', 
+                                'post_type' => 'ferramenta', 
                                 'cat' => $category_id, 
                             ); 
 
@@ -101,7 +108,7 @@ get_header();
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $category_id = get_query_var('cat'); 
                             $args = array( 
-                                'post_type' => 'produto', 
+                                'post_type' => 'ferramenta', 
                                 'cat' => $category_id, 
                                 'posts_per_page' => 9,
                                 'orderby' => $orderby,

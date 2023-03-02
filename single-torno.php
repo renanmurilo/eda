@@ -2,6 +2,29 @@
 get_header(); ?>
 
     <main>
+        <?php include(TEMPLATEPATH . '/include/breadcrumb.php'); ?>
+        
+        <div class="trocar__modelo">
+            <a href="" class="btn btn__primary" id="openProducts">
+                Trocar modelo
+            </a>
+
+            <div class="content__modelos">
+                <?php
+                    $args = array (
+                        'post_type' => 'torno',
+                        'order' => 'DESC',
+                        'show_post' => 50,
+                    );
+                    $the_query = new WP_Query ( $args );
+                ?>
+
+                <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?php include(TEMPLATEPATH . '/include/produto.php'); ?>
+                <?php endwhile; else : endif; ?>
+            </div>
+        </div>
+
         <section class="section__dados">
             <div class="shell">
                 <div class="content__dados">
@@ -54,7 +77,7 @@ get_header(); ?>
             </div>
 
             <div class="button">
-                <a href="/tornos" class="btn btn__primary">Veja a lista completa de preços</a>
+                <a href="<?php echo get_home_url(); ?>/tornos" class="btn btn__primary">Veja a lista completa de preços</a>
             </div>
         </section>
     </main>

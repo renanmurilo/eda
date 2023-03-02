@@ -2,6 +2,8 @@
 get_header(); ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
     <main>
+        <?php include(TEMPLATEPATH . '/include/breadcrumb.php'); ?>
+        
         <section class="section__banner">
             <div class="shell">
                 <div class="content__banner">
@@ -100,7 +102,7 @@ get_header(); ?>
 
                     <?php
                         $args = array (
-                            'post_type' => 'produto',
+                            'post_type' => 'ferramentas',
                             'order' => 'DESC',
                             'showposts' => 50,
                             'post__not_in'  => array( $post->ID ),

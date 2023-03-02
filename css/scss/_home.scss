@@ -223,6 +223,11 @@
     height: 43.7644rem;
     padding-top: 8.125rem;
 
+    @media ($desktopLarge) {
+        height: 60rem;
+        padding-top: 13rem;
+    }
+
     @media($mobile) {
         background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-sobre-home-mobile.png);
         height: 51.875rem;

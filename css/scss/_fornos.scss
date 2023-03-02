@@ -444,6 +444,10 @@
     background-size: cover;
     height: 35.7144rem;
 
+    @media ($desktopLarge) {
+        height: 43rem;
+    }
+
     @media ($mobile) {
         background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-pagamento-mobile.png);
         height: 41.25rem;
@@ -465,6 +469,10 @@
         .texto__pagamento {
             width: 45%;
             margin-top: 3.6844rem;
+
+            @media ($desktopLarge) {
+                margin-top: 10rem;
+            }
 
             @media ($mobile) {
                 width: 100%;
@@ -501,6 +509,10 @@
             width: 46.5%;
             position: relative;
             top: 9rem;
+
+            @media ($desktopLarge) {
+                top: 13rem;
+            }
 
             @media ($mobile) {
                 width: 100%;
@@ -612,6 +624,7 @@
                 max-width: 18.25rem;
                 line-height: 2.375rem;
                 margin-bottom: 1.25rem;
+                padding-top: 5.5rem;
 
                 @media ($mobile) {
                     font-size: 1.375rem;

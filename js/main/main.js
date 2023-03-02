@@ -22,6 +22,17 @@ closeMenu.addEventListener('click', (e) => {
     logo.classList.toggle('active')
 });
 
+let openProducts = document.getElementById('openProducts')
+let contentModelos = document.querySelector('.content__modelos')
+console.log(openProducts);
+console.log(contentModelos);
+
+openProducts.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    contentModelos.classList.toggle('active')
+});
+
 $('[data-group]').each(function () {
     var $allTarget = $(this).find('[data-target]'),
         $allClick = $(this).find('[data-click]'),

@@ -14,6 +14,10 @@
     background-repeat: no-repeat;
     min-height: 25.25rem;
 
+    @media ($desktopLarge) {
+        min-height: 32rem;
+    }
+
     @media ($mobile) {
         background-image: none;
     }
@@ -523,6 +527,11 @@
     background-size: cover;
     height: 29.1875rem;
 
+    @media ($desktopLarge) {
+        height: 41rem;
+        background-size: 100%;
+    }
+
     @media ($mobile) {
         height: 100%;
         margin-bottom: 3.5rem;
@@ -554,6 +563,10 @@
             color: $black;
             margin-bottom: 2.5rem;
             padding-top: 8rem;
+
+            @media ($desktopLarge) {
+                padding-top: 15rem;
+            }
 
             @media ($mobile) {
                 font-size: 1.25rem;
@@ -596,6 +609,10 @@
     height: 38.125rem;
     margin-top: 7.5625rem;
 
+    @media ($desktopLarge) {
+        height: 52rem;
+    }
+
     @media ($mobile) {
         background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-importandora-mobile.png);
         height: 49.9375rem;
@@ -610,6 +627,10 @@
         margin: auto 0 auto auto;
         max-width: 33.125rem;
         padding-top: 4.0625rem;
+
+        @media ($desktopLarge) {
+            padding-top: 10rem;
+        }
 
         @media ($mobile) {
             max-width: 18.7rem;

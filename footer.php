@@ -43,19 +43,19 @@
                     <div class="menu__footer">
                          <ul class="list__menu">
                             <li class="item__menu">
-                                <a href="">Seja um representante</a>
+                                <a href="<?php echo get_home_url(); ?>/fale-conosco/">Seja um representante</a>
                             </li>
 
                             <li class="item__menu">
-                                <a href="">Dúvidas frequentes</a>
+                                <a href="<?php echo get_home_url(); ?>/duvidas-frequentes">Dúvidas frequentes</a>
                             </li>
 
                             <li class="item__menu">
-                                <a href="">Política de privacidade</a>
+                                <a href="<?php echo get_home_url(); ?>/politica-de-privacidade">Política de privacidade</a>
                             </li>
 
                             <li class="item__menu">
-                                <a href="">Termos de uso</a>
+                                <a href="<?php echo get_home_url(); ?>/termos-de-uso">Termos de uso</a>
                             </li>
                         </ul>
 

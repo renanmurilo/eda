@@ -25,6 +25,38 @@ main {
 	}
 }
 
+.section__breadcrumb {
+	width: 100%;
+	padding-top: 5.5rem;
+
+	.breadcrumbs {
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		&:first-child {
+			margin-left: 0;
+			color: $text-dark;
+		}
+
+		span {
+			@include font-roboto(1.125rem, 300);
+			color: $text-dark;
+			margin: 0 .2rem;
+
+			&:first-child {
+				margin-left: 0;
+				color: $text-dark;
+			}
+
+			a {
+				@include font-roboto(1.125rem, 300);
+				color: $text-dark;
+			}
+		}
+	}
+}
+
 .section__privacidade {
 	width: 100%;
 	padding-top: 6.625rem;

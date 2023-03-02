@@ -1,10 +1,6 @@
 <?php
 // Template Name: Fornos e Tornos
 get_header();
-?><?php
-if (function_exists('bcn_display')) {
-    bcn_display();
-}
 ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
         <main>
@@ -44,7 +40,7 @@ if (function_exists('bcn_display')) {
                                 <?php endwhile; else : endif; ?>
                             </div>
 
-                            <a href="/fornos" class="btn btn__primary">Conheça os fornos</a>
+                            <a href="<?php echo get_home_url(); ?>/fornos" class="btn btn__primary">Conheça os fornos</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +71,7 @@ if (function_exists('bcn_display')) {
                                 <?php endwhile; else : endif; ?>
                             </div>
 
-                            <a href="/tornos" class="btn btn__primary">Veja os tornos</a>
+                            <a href="<?php echo get_home_url(); ?>/tornos" class="btn btn__primary">Veja os tornos</a>
                         </div>
 
                         <div class="image__desktop">

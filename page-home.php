@@ -31,7 +31,7 @@ get_header();
                             <?php the_field('texto_sobre'); ?>
                         </div>
 
-                        <a href="" class="btn btn__black">Veja a nossa história</a>
+                        <a href="<?php echo get_home_url(); ?>/quem-somos" class="btn btn__black">Veja a nossa história</a>
                     </div>
                 </div>
             </section>

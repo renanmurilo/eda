@@ -5,6 +5,9 @@
     background-position: top center;
     background-size: 100%;
 
+    @media ($desktopLarge) {
+        height: 39rem;
+    }
 
     @media ($mobile) {
         background-image: url(http://eda.local/wp-content/uploads/2023/03/banner-assistencia-mobile.png);
@@ -17,6 +20,10 @@
         align-items: center;
         width: 100%;
         padding: 7.75rem 0 7.625rem;
+
+        @media ($desktopLarge) {
+            padding-top: 12rem;
+        }
 
         @media ($mobile) {
             padding: 2.95rem 0 0;

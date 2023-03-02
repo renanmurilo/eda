@@ -63,7 +63,7 @@ get_header();
                             <?php the_field('texto_representante'); ?>
                         </div>
 
-                        <a href="" class="btn btn__black">Saiba mais</a>
+                        <a href="<?php echo get_home_url(); ?>" class="btn btn__black">Saiba mais</a>
                     </div>
                 </div>
             </section>

@@ -76,7 +76,7 @@ get_header();
                             $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'title';
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $args = array (
-                                'post_type' => 'produto',
+                                'post_type' => 'ferramentas',
                                 'order' => 'DESC',
                                 'orderby' => $orderby,
                                 'posts_per_page' => 9,

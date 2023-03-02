@@ -1,3 +1,59 @@
+.trocar__modelo {
+    position: absolute;
+    top: 13.5rem;
+    right: 9rem;
+
+    .btn__primary {
+        width: 13.8125rem;
+        height: 3.5rem;
+    }
+
+    .content__modelos {
+        background-color: $white;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        width: 13.8125rem;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        height: 0%;
+        align-items: center;
+        max-height: 39.5625rem;
+        overflow-y: auto;
+        transition: all .4s;
+
+        &.active {
+            height: 39.5625rem;
+            opacity: 1;
+            transition: all .4s;
+        }
+
+        .produto {
+            max-width: 6.6875rem;
+            height: 8.75rem;
+            margin-bottom: 4rem;
+
+            .image {
+                width: 6.6875rem;
+                height: 7.25rem;
+                border: 0.0625rem solid $yellow;
+            }
+
+            .description {
+                width: 100%;
+                margin-top: 1rem;
+
+                h3 {
+                    @include font-roboto(0.875rem, 700);
+                    color: $black;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
 .section__dados {
     width: 100%;
     padding-top: 2.625rem;
