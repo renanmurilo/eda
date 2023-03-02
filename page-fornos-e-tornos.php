@@ -48,6 +48,10 @@ if (function_exists('bcn_display')) {
                         </div>
                     </div>
                 </div>
+
+                <div class="image__mobile">
+                    <img src="<?php the_field('imagem_fornos_desktop'); ?>" alt="<?php the_field('titulo_fornos'); ?>">
+                </div>
             </section>
 
             <section class="section__tornos">
@@ -79,6 +83,10 @@ if (function_exists('bcn_display')) {
                         </div>
                     </div>
                 </div>
+
+                 <div class="image__mobile">
+                    <img src="<?php the_field('imagem_tornos_desktop'); ?>" alt="<?php the_field('titulo_tornos'); ?>">
+                </div>
             </section>
 
             <section class="section__skutt">
@@ -95,6 +103,10 @@ if (function_exists('bcn_display')) {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="image__mobile">
+                    <img src="<?php the_field('imagem_skutt_mobile'); ?>" alt="<?php the_field('titulo_skutt'); ?>">
                 </div>
             </section>
         </main>

@@ -2,16 +2,38 @@
     width: 100%;
     margin-top: 6.9294rem;
 
+    @media ($mobile) {
+        margin-top: 3.9225rem;
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            margin-top: 3.875rem;
+        }
+    }
+
     .content__fornos {
         width: 100%;
         display: flex;
         position: relative;
+
+        @media ($mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         .image__desktop {
             width: 100%;
             max-width: 44.125rem;
             position: absolute;
             left: -9rem;
+
+            @media ($mobile) {
+                display: none;
+            }
 
             img {
                 width: 100%;
@@ -26,22 +48,43 @@
             margin: auto 0 auto auto;
             max-width: 32.25rem;
 
+            @media ($mobile) {
+                order: 1;
+                max-width: 17.5rem;
+                margin: auto;
+            }
+
             h1 {
                 @include font-roboto(1.875rem, 700);
                 color: $black;
                 text-transform: uppercase;
                 margin-bottom: 1.4375rem;
+
+                @media ($mobile) {
+                    font-size: 1.25rem;
+                    margin-bottom: 1.5rem;
+                }
             }
 
             .text {
                 width: 100%;
                 max-width: 29.875rem;
 
+                @media ($mobile) {
+                    max-width: 17.5rem;
+                }
+
                 p {
                     @include font-roboto(1.5rem, 300);
                     color: $black;
                     line-height: 2rem;
                     margin-bottom: 2rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
                 }
             }
 
@@ -65,10 +108,20 @@
                         text-transform: uppercase;
                         line-height: 2.5rem;
 
+                        @media ($mobile) {
+                            line-height: 1.25rem;
+                            font-size: 0.9375rem;
+                            max-width: 9rem;
+                        }
+
                         span {
                             font-size: 1rem;
                             font-weight: 400;
                             text-transform: lowercase;
+
+                            @media ($mobile) {
+                                font-size: 0.75rem;
+                            }
                         }
                     }
                 }
@@ -77,6 +130,12 @@
             .btn__primary {
                 width: 13.1875rem;
                 margin-top: 2.625rem;
+
+                @media ($mobile) {
+                    margin-top: 3.5419rem;
+                    width: 13rem;
+                    height: 2.8125rem;
+                }
             }
         }
     }
@@ -86,16 +145,37 @@
     width: 100%;
     margin-top: 120.38px;
 
+    @media ($mobile) {
+        margin-top: 3.9888rem;
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            margin-top: 3.875rem;
+        }
+    }
+
     .content__tornos {
         width: 100%;
         display: flex;
         position: relative;
+
+        @media ($mobile) {
+            flex-wrap: wrap;
+        }
 
         .image__desktop {
             width: 100%;
             max-width: 44.125rem;
             position: absolute;
             right: -7.6rem;
+
+            @media ($mobile) {
+                display: none;
+            }
 
             img {
                 width: 100%;
@@ -109,22 +189,44 @@
             flex-direction: column;
             max-width: 32.25rem;
 
+            @media ($mobile) {
+                order: 1;
+                max-width: 17.5rem;
+                margin: auto;
+            }
+
             h2 {
                 @include font-roboto(1.875rem, 700);
                 color: $black;
                 text-transform: uppercase;
                 margin-bottom: 1.4375rem;
+
+                @media ($mobile) {
+                    font-size: 1.25rem;
+                    margin-bottom: 1.5rem;
+                }
             }
 
             .text {
                 width: 100%;
                 max-width: 29.875rem;
 
+                @media ($mobile) {
+                    max-width: 17.5rem;
+                }
+
+
                 p {
                     @include font-roboto(1.5rem, 300);
                     color: $black;
                     line-height: 2rem;
                     margin-bottom: 2rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
                 }
             }
 
@@ -148,10 +250,20 @@
                         text-transform: uppercase;
                         line-height: 2.5rem;
 
+                        @media ($mobile) {
+                            line-height: 1.25rem;
+                            font-size: 0.9375rem;
+                            max-width: 11.625rem;
+                        }
+
                         span {
                             font-size: 1rem;
                             font-weight: 400;
                             text-transform: lowercase;
+
+                            @media ($mobile) {
+                                font-size: 0.75rem;
+                            }
                         }
                     }
                 }
@@ -160,6 +272,12 @@
             .btn__primary {
                 width: 13.1875rem;
                 margin-top: 2.625rem;
+
+                @media ($mobile) {
+                    margin-top: 3.5306rem;
+                    width: 10.625rem;
+                    height: 2.8125rem;
+                }
             }
         }
     }
@@ -172,6 +290,33 @@
     background-color: $orange-dark;
     margin: 7.5rem auto 5.9763rem;
 
+    @media ($mobile) {
+        margin: 3.1025rem auto 4.04rem;
+        height: 40.55rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     .content__skutt {
         display: flex;
         width: 100%;
@@ -181,6 +326,10 @@
             position: absolute;
             left: -13rem;
             height: 480px;
+
+            @media ($mobile) {
+                display: none;
+            }
 
             img {
                 object-fit: cover;
@@ -194,20 +343,40 @@
             margin: auto 0 auto auto;
             padding: 4.3125rem 0 0;
 
+            @media ($mobile) {
+                padding: 3.4481rem 0 0;
+            }
+
             h2 {
                 @include font-roboto(1.875rem, 700);
                 color: $white;
                 text-transform: uppercase;
                 margin-bottom: 2.5625rem;
+
+                @media($mobile) {
+                    font-size: 1.25rem;
+                    margin-bottom: 1.5rem;
+                    line-height: 1.75rem;
+                    max-width: 100%;
+                }
             }
 
             .text {
                 width: 100%;
 
+                @media ($mobile) {
+                    max-width: 18.375rem;
+                }
+
                 p {
                     @include font-roboto(1.5rem, 300);
                     color: $white;
                     line-height: 2rem;
+
+                    @media($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
                 }
             }
         }

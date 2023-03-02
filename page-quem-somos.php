@@ -13,7 +13,7 @@ get_header();
 
             <section class="section__nossa__historia__slider">
                 <div class="content__nossa__historia__slider">
-                    <h2>Nossa historia</h2>
+                    <h2>Nossa história</h2>
                     
                     <div class="inner__nossa__historia__slider slider-nossa-historia">
                         <?php if(have_rows('nossa_historia')): while(have_rows('nossa_historia')) : the_row(); ?>

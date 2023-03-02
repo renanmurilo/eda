@@ -36,9 +36,6 @@ get_header();
                                 );
                                 $the_query = new WP_Query ( $args );
                             ?>
-                            <pre>
-                                <?php print_r($the_query->have_posts() ); ?>
-                            </pre>
 
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                                 <?php include(TEMPLATEPATH . '/include/post.php'); ?>
@@ -141,6 +138,9 @@ get_header();
             </section>
 
             <section class="section__manual">
+                <div class="image__mobile">
+                    <img src="<?php the_field('imagem_manual_mobile'); ?>" alt="<?php the_field('titulo_manual'); ?>">
+                </div>
                 <div class="shell">
                     <div class="content__manual">
                         <div class="image__desktop">

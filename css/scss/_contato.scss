@@ -1,5 +1,9 @@
 .separador {
     padding-top: 3.0313rem;
+
+    @media ($mobile) {
+        padding-top: 0;
+    }
 }
 
 .banner__contato {
@@ -10,6 +14,10 @@
     background-repeat: no-repeat;
     min-height: 25.25rem;
 
+    @media ($mobile) {
+        background-image: none;
+    }
+
     .content__banner__contato {
         display: flex;
         flex-direction: column;
@@ -17,26 +25,55 @@
         width: 100%;
         padding-top: 6.8281rem;
 
+        @media ($mobile) {
+            padding-top: 2.9375rem;
+        }
+
         h1 {
             @include font-roboto(2.125rem, 700);
             color: $black;
             text-transform: uppercase;
             margin-bottom: 1.7031rem;
+
+            @media ($mobile) {
+                font-size: 1.25rem;
+                margin-bottom: 0.7544rem;
+                text-align: center;
+            }
         }
 
         p {
             @include font-roboto(1.5rem, 300);
             color: $black;
             margin-bottom: 1.6875rem;
+
+            @media ($mobile) {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                max-width: 17.5rem;
+                margin: auto auto 0.75rem;
+                text-align: center;
+            }
         }
 
         .row__buttons {
             display: flex;
+            flex-wrap: wrap;
+
+            @media ($mobile) {
+                justify-content: center;
+            }
 
             .btn__outline__black {
                 margin: auto 0.5rem;
                 height: 3.5rem;
                 width: 16.0625rem;
+
+                @media ($mobile) {
+                    width: 16.0625rem;
+                    height: 2.8125rem;
+                    margin-top: 0.875rem;
+                }
 
                 &.active {
                     background-color: $yellow;
@@ -53,6 +90,11 @@
 
             &.active {
                 display: flex;
+
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
             }
 
             .btn__wrapper {
@@ -62,6 +104,12 @@
                 flex-direction: column;
                 align-items: center;
 
+                @media ($mobile) {
+                    max-width: 8.5rem;
+                    margin: 0 auto 3.0625rem;
+                    justify-content: flex-start;
+                }
+
                 .btn__form {
                     @include font-roboto(1.125rem, 700);
                     color: $black;
@@ -69,6 +117,11 @@
                     text-transform: uppercase;
                     line-height: 1.5rem;
                     position: relative;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                    }
 
                     &.active {
                         &::after {
@@ -104,6 +157,11 @@
                     color: $black;
                     margin-top: 0.8087rem;
                     text-align: center;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.125rem;
+                    }
                 }
             }
         }
@@ -115,6 +173,11 @@
 
             &.active {
                 display: flex;
+
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
             }
 
             .btn__wrapper {
@@ -124,6 +187,12 @@
                 flex-direction: column;
                 align-items: center;
 
+                @media ($mobile) {
+                    max-width: 8.5rem;
+                    margin: 0 0.625rem 3.0625rem;
+                    justify-content: flex-start;
+                }
+
                 .btn__form {
                     @include font-roboto(1.125rem, 700);
                     color: $black;
@@ -131,6 +200,11 @@
                     text-transform: uppercase;
                     line-height: 1.5rem;
                     position: relative;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                    }
 
                     &.active {
                         &::after {
@@ -166,6 +240,11 @@
                     color: $black;
                     margin-top: 0.8087rem;
                     text-align: center;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        line-height: 1.125rem;
+                    }
                 }
             }
         }
@@ -178,6 +257,13 @@
 
             &.active {
                 display: flex;
+
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 2.6125rem;
+                    position: relative;
+                }
             }
 
             .box__form {
@@ -191,9 +277,21 @@
                 flex-direction: column;
                 align-items: center;
 
+                @media ($mobile) {
+                    background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-whats-mobile.png);
+                    height: 16.625rem;
+                    width: 25rem;
+                    position: absolute;
+                }
+
                 .image {
                     padding-top: 4.3319rem;
                     margin-bottom: 1.25rem;
+
+                    @media ($mobile) {
+                        margin-bottom: .5rem;
+                        padding-top: 8rem;
+                    }
                 }
 
                 h3 {
@@ -204,11 +302,23 @@
                     max-width: 13.25rem;
                     text-align: center;
                     line-height: 1.5rem;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                        max-width: 100%;
+                        margin-bottom: .5rem;
+                    }
                 }
 
                 a {
                     @include font-roboto(0.9375rem, 300);
                     color: $black;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                        max-width: 100%;
+                        text-align: center;
+                    }
                 }
             }
 
@@ -216,29 +326,60 @@
                 width: 100%;
                 max-width: 38.8125rem;
 
+                @media ($mobile) {
+                    max-width: 17.5rem;
+                    margin-top: 2.5631rem;
+                    margin-bottom: 3.9375rem;
+                    padding-top: 16.5rem;
+                }
+
                 form {
                     display: flex;
                     flex-wrap: wrap;
                     width: 100%;
                     max-width: 38.8125rem;
 
+                    @media ($mobile) {
+                        max-width: 100%;
+                    }
+
                     .form__row {
                         width: 100%;
                         display: flex;
                         justify-content: space-between;
 
+                        @media ($mobile) {
+                            flex-wrap: wrap;
+                        }
+
                         &.recaptcha {
                             justify-content: flex-start;
                             flex-wrap: wrap;
 
+                            @media ($mobile) {
+                                width: 100%;
+                            }
+
                             &>div {
                                 width: 100%;
+                            }
+
+                            p {
+                                padding: 0;
+                                margin: 0;
                             }
 
                             .btn__primary {
                                 margin: auto 0;
                                 height: 3.5rem;
                                 width: 11.625rem;
+
+                                @media ($mobile) {
+                                    width: 11.625rem;
+                                    height: 2.8125rem;
+                                    margin: 0 auto 0 0;
+                                    float: left;
+                                }
                             }
                         }
 
@@ -251,12 +392,25 @@
                                 @include font-roboto(0.9375rem, 400);
                                 color: $black;
                                 text-align: center;
+
+                                @media ($mobile) {
+                                    font-size: 0.75rem;
+                                    max-width: 12.6875rem;
+                                    margin: auto;
+                                    line-height: 0.875rem;
+                                }
                             }
 
                             .btn__primary {
                                 margin: 2rem auto 0;
                                 height: 3.5rem;
                                 width: 11.625rem;
+
+                                @media ($mobile) {
+                                    width: 11.625rem;
+                                    height: 2.8125rem;
+                                    margin: 2.035rem auto 0;
+                                }
                             }
                         }
 
@@ -266,15 +420,29 @@
                             width: 100%;
                             margin-bottom: 1.325rem;
 
+                            @media ($mobile) {
+                                align-items: flex-start;
+                                margin-bottom: 1rem;
+                            }
+
                             p {
                                 padding: 0;
                                 margin: 0 0 .2rem;
                                 @include font-roboto(0.875rem, 300);
                                 color: $black;
+
+                                @media ($mobile) {
+                                    margin: 0 0 .4rem;
+                                    text-align: left;
+                                }
                             }
 
                             &.w45 {
                                 width: 49%;
+
+                                @media ($mobile) {
+                                    width: 100%;
+                                }
                             }
 
                             .btn__arquivo {
@@ -284,6 +452,11 @@
                                 font-size: 0;
                                 width: 13.915rem;
                                 margin-bottom: 0.7638rem;
+
+                                @media ($mobile) {
+                                    width: 16.0625rem;
+                                    height: 2.8125rem;
+                                }
 
                                 &::before {
                                     content: 'SELECIONAR ARQUIVO';
@@ -297,12 +470,22 @@
                                     @include font-roboto(1.125rem, 700);
                                     color: $black;
                                     text-transform: uppercase;
+
+                                    @media ($mobile) {
+                                        width: 16.0625rem;
+                                        height: 2.8125rem;
+                                        font-size: 1rem;
+                                    }
                                 }
                             }
 
                             .label__field {
                                 @include font-roboto(0.875rem, 700);
                                 color: $black;
+
+                                @media ($mobile) {
+                                    text-align: left;
+                                }
                             }
 
                             .field {
@@ -340,6 +523,28 @@
     background-size: cover;
     height: 29.1875rem;
 
+    @media ($mobile) {
+        height: 100%;
+        margin-bottom: 3.5rem;
+        background-image: none;
+        background-position: none;
+        background-size: none;
+        margin-top: 0;
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
     .content__showroom {
         width: 100%;
 
@@ -349,17 +554,33 @@
             color: $black;
             margin-bottom: 2.5rem;
             padding-top: 8rem;
+
+            @media ($mobile) {
+                font-size: 1.25rem;
+                margin-bottom: 1.5rem;
+                padding-top: 0;
+                margin-top: 2.5rem;
+            }
         }
 
         .text {
             width: 100%;
             max-width: 25.25rem;
 
+            @media ($mobile) {
+                max-width: 17.5rem;
+            }
+
             p {
                 @include font-roboto(1.5rem, 300);
                 color: $black;
                 line-height: 2rem;
                 margin-bottom: 1rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
             }
         }
 
@@ -375,6 +596,13 @@
     height: 38.125rem;
     margin-top: 7.5625rem;
 
+    @media ($mobile) {
+        background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-importandora-mobile.png);
+        height: 49.9375rem;
+        margin: 3.5625rem 0;
+        background-size: 100%;
+    }
+
     .content__importadora__eda {
         width: 100%;
         display: flex;
@@ -383,21 +611,42 @@
         max-width: 33.125rem;
         padding-top: 4.0625rem;
 
+        @media ($mobile) {
+            max-width: 18.7rem;
+            margin: auto 0;
+            padding-top: 18rem;
+        }
+
         h2 {
             @include font-roboto(2.125rem, 700);
             color: $black;
             text-transform: uppercase;
             margin-bottom: 2.5625rem;
+
+            @media ($mobile) {
+                font-size: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
         }
 
         ul {
             max-width: 17.5rem;
             margin-bottom: 1rem;
 
+            @media ($mobile) {
+                max-width: 14.8rem;
+                margin-bottom: 1.5rem;
+            }
+
             li {
                 @include font-roboto(1.25rem, 700);
                 color: $black;
                 line-height: 2rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
             }
         }
 
@@ -408,6 +657,11 @@
                 @include font-roboto(1.5rem, 300);
                 color: $black;
                 margin-bottom: 1rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
             }
         }
     }

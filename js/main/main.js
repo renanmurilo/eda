@@ -4,8 +4,6 @@ let menu = document.querySelector('.menu')
 let closeMenu = document.querySelector('.close__menu')
 let logo = document.querySelector('.logo__mobile')
 
-console.log(menu);
-
 openMenu.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -22,7 +20,7 @@ closeMenu.addEventListener('click', (e) => {
     closeMenu.classList.toggle('active')
     menu.classList.toggle('active');
     logo.classList.toggle('active')
-})
+});
 
 $('[data-group]').each(function () {
     var $allTarget = $(this).find('[data-target]'),
@@ -60,6 +58,8 @@ $('[data-grupo]').each(function () {
 
         $allTarget.removeClass(activeClass);
         $allClick.removeClass(activeClass);
+        $viewForm.removeClass(activeClass);
+        $click.removeClass(activeClass);
 
         var id = $(this).data('click'),
             $target = $('[data-target="' + id + '"]');
@@ -89,7 +89,7 @@ $(document).ready(function() {
     $(formOrdenar).on('change', function() {
         $(btnOrdenar).trigger('click')
     })
-})
+});
 
 $(document).ready(function() {
     const current = document.querySelector('#current');
@@ -107,7 +107,9 @@ $(document).ready(function() {
         setTimeout(() => current.classList.remove('fade-in'), 500);
         e.target.style.opacity = opacity;
     }
+});
 
+(() => {
     if (!localStorage.pureJavaScriptCookies) {
         document.querySelector(".box-cookies").classList.remove('hide');
     }
@@ -120,7 +122,7 @@ $(document).ready(function() {
     const btnCookies = document.querySelector(".btn-cookies");
 
     btnCookies.addEventListener('click', acceptCookies);
-})
+})();
 // $(document).ready(function(){
 //     $('.row__wrapper__slide .btn__wrapper').click(function(){
 //         $('.btn__wrapper').removeClass("active");

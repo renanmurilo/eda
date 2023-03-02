@@ -8,3 +8,6 @@
         <img src="<?php the_field('imagem_ferramentas'); ?>" alt="<?php the_field('titulo_ferramentas'); ?>">
     </div>
 </div>
+    <div class="image__mobile">
+        <img src="<?php the_field('imagem_ferramentas_mobile'); ?>" alt="<?php the_field('titulo_ferramentas'); ?>">
+    </div>

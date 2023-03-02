@@ -34,6 +34,30 @@ get_header();
                     </div>
                 </div>
 
+                <div class="filtros__mobile">
+                    <div class="nav__filtros">
+                    <h3>CATEGORIAS</h3>
+                        <?php
+                            wp_nav_menu([
+                                'menu' => 'categorias',
+                                'menu_class' => 'filtro-cat',
+                                'container' => false,
+                            ]);
+                        ?>
+                    </div>
+                    
+                    <div class="nav__filtros">
+                        <h3>Marca</h3>
+                        <?php
+                            wp_nav_menu([
+                                'menu' => 'marcas',
+                                'menu_class' => 'marcas-cat',
+                                'container' => false,
+                            ]);
+                        ?>
+                    </div>
+                </div>
+
                 <div class="menu__category">
                     <?php
                             wp_nav_menu([
@@ -60,6 +84,15 @@ get_header();
                             ]);
                         ?>
                         
+                        <h3>Marca</h3>
+
+                        <?php
+                            wp_nav_menu([
+                                'menu' => 'marcas',
+                                'menu_class' => 'marcas-cat',
+                                'container' => false,
+                            ]);
+                        ?>
                     </aside>
 
                     <div class="inner__category">

@@ -92,7 +92,7 @@ $(document).ready(function() {
     });
 })
 
-var $homeSlider = $(".slide-home-reconhecimento");
+var $homeSlider = $(".filtro-menu");
 
 $(window).resize(function() {
   showHomeSlider();
@@ -111,11 +111,11 @@ showHomeSlider();
 
 function initialHomeSlider() {
   $homeSlider.addClass("owl-carousel").owlCarousel({
-    items:1,
-    dots: true,
+    items: 3,
+    dots: false,
     nav: true,
-    loop: true,
-    autoplay: true,
+    loop: false,
+    margin: 5,
   });
 }
 

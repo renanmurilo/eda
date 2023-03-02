@@ -2,6 +2,10 @@
     width: 100%;
     padding-top: 3.625rem;
 
+    @media ($mobile) {
+        padding-top: 2rem;
+    }
+
     .content__video {
         width: 100%;
 
@@ -11,6 +15,12 @@
             text-transform: uppercase;
             text-align: center;
             margin-bottom: 2.5rem;
+
+            @media ($mobile) {
+                font-size: 1.75rem;
+                max-width: 14.625rem;
+                margin: auto auto 2rem;
+            }
         }
 
         .video {
@@ -21,9 +31,18 @@
             max-height: 32.8125rem;
             max-width: 55.875rem;
 
+            @media ($mobile) {
+                max-width: 100%;
+                max-height: 10.25rem;
+            }
+
             iframe {
                 width: 100%;
                 height: 32.8125rem;
+
+                @media ($mobile) {
+                    height: 10.25rem;
+                }
             }
         }
     }
@@ -32,6 +51,10 @@
 .section__unidades__fornos {
     width: 100%;
     margin-top: 4.5rem;
+
+    @media ($mobile) {
+        margin-top: 5.125rem;
+    }
 
     .content__fornos {
         width: 100%;
@@ -51,6 +74,10 @@
                 right: 0;
                 left: -0.125rem;
                 margin: auto;
+
+                @media ($mobile) {
+                    width: 6.75rem;
+                }
             }
         }
     }
@@ -61,14 +88,29 @@
         display: flex;
         flex-wrap: wrap;
 
+        @media ($mobile) {
+            justify-content: center;
+            margin-top: 1.7188rem;
+        }
+
         .card {
             max-width: 12.4106rem;
             height: 18rem;
             margin-right: 5.7763rem;
             margin-bottom: 3.5625rem;
 
+            @media ($mobile) {
+                margin: auto auto 2.5638rem;
+                height: 17.03rem;
+                max-width: 11.9113rem;
+            }
+
             &:nth-child(4n) {
                 margin-right: 0;
+
+                @media ($mobile) {
+                    margin: auto auto 2.5638rem;
+                }
             }
 
             a {
@@ -83,6 +125,10 @@
                     width: 100%;
                     border: 0.125rem solid $yellow;
 
+                    @media ($mobile) {
+                        height: 13.6862rem;
+                    }
+
                     img {
                         object-fit: cover;
                         width: 100%;
@@ -94,12 +140,21 @@
                     width: 100%;
                     margin-top: 1.25rem;
 
+                    @media ($mobile) {
+                        margin-top: 1.7188rem;
+                    }
+
                     h3 {
                         @include font-roboto(1.375rem, 700);
                         color: $black;
                         text-transform: uppercase;
                         line-height: 2.375rem;
                         text-align: center;
+
+                        @media ($mobile) {
+                            font-size: 1.25rem;
+                            line-height: 1.5rem;
+                        }
                     }
                 }
             }
@@ -110,6 +165,10 @@
 .section__precos {
     width: 100%;
     margin: 7.4981rem auto 5.75rem;
+
+    @media ($mobile) {
+        margin: 4rem auto;
+    }
 
     .content__precos {
         width: 100%;
@@ -122,6 +181,34 @@
         .inner__precos {
             margin-top: 5.2519rem;
             width: 100%;
+
+            @media ($mobile) {
+                max-width: 100%;
+                display: grid;
+                grid-auto-columns: max-content;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                justify-content: flex-start;
+                height: auto;
+                padding: 0 0 1.25rem;
+                position: relative;
+
+                &::-webkit-scrollbar {
+                    width: 0.125rem;
+                    height: 0.25rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: $background;
+                    width: 10px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    height: 20vh;
+                    background: $yellow;
+                }
+            }
+
 
             .header__precos {
                 width: 100%;
@@ -153,6 +240,11 @@
                         color: $black;
                         text-transform: uppercase;
                         text-align: center;
+
+                        @media ($mobile) {
+                            font-size: 0.75rem;
+                            padding: 0 1.25rem;
+                        }
                     }
                 }
 
@@ -163,6 +255,7 @@
                         width: 100%;
                         height: 2rem;
                         background-color: $background;
+                        border: none;
 
                         &:nth-child(even) {
                             background-color: $white
@@ -176,6 +269,10 @@
                             a {
                                 text-decoration: underline;
                             }
+
+                            @media ($mobile) {
+                                font-size: 0.75rem;
+                            }
                         }
                     }
                 }
@@ -188,6 +285,10 @@
     width: 100%;
     margin-bottom: 8.2281rem;
 
+    @media ($mobile) {
+        margin-bottom: 3.5rem;
+    }
+
     .content__acessorios {
         width: 100%;
 
@@ -196,6 +297,10 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
+
+            @media ($mobile) {
+                margin-top: 3.5rem;
+            }
 
             .header__acessorios {
                 width: 100%;
@@ -209,6 +314,10 @@
                     color: $yellow;
                     text-transform: uppercase;
                     padding-left: 1.8125rem;
+
+                    @media ($mobile) {
+                        font-size: 1.25rem;
+                    }
                 }
             }
 
@@ -220,6 +329,10 @@
                 width: 100%;
                 padding: 0.4375rem 3.3125rem;
 
+                @media ($mobile) {
+                    padding: 0.5625rem 1.125rem 0.5rem 1.8125rem;
+                }
+
                 &:nth-child(odd) {
                     background-color: $white
                 }
@@ -227,6 +340,10 @@
                 p {
                     @include font-roboto(0.875rem, 300);
                     color: $black;
+
+                    @media ($mobile) {
+                        font-size: 0.75rem;
+                    }
                 }
             }
         }
@@ -250,6 +367,10 @@
             flex-wrap: wrap;
             margin-top: 5.0644rem;
 
+            @media ($mobile) {
+                margin-top: 4rem;
+            }
+
             .box {
                 display: flex;
                 align-items: center;
@@ -257,20 +378,42 @@
                 width: 100%;
                 margin-bottom: 4.0019rem;
 
+                @media ($mobile) {
+                    flex-wrap: wrap;
+                    margin-bottom: 2.0219rem;
+                    justify-content: flex-start;
+                }
+
                 .image {
                     align-self: center;
                     display: flex;
                     margin: auto;
                     max-width: 8.415rem;
+
+                    @media ($mobile) {
+                        align-self: flex-start;
+                        margin: auto auto 1.1581rem 1rem;
+                    }
                 }
 
                 .description {
                     max-width: 54.25rem;
 
+                    @media ($mobile) {
+                        max-width: 17.5rem;
+                        margin: auto;
+                    }
+
                     h3 {
                         @include font-roboto(1.875rem, 700);
                         color: $black;
                         margin-bottom: 1.4688rem;
+
+                        @media ($mobile) {
+                            font-size: 1.25rem;
+                            margin-bottom: 1.5313rem;
+                            line-height: 1.75rem;
+                        }
                     }
 
                     .text {
@@ -280,6 +423,11 @@
                             @include font-roboto(1.5rem, 300);
                             color: $black;
                             line-height: 2rem;
+
+                            @media ($mobile) {
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                            }
                         }
                     }
                 }
@@ -296,6 +444,12 @@
     background-size: cover;
     height: 35.7144rem;
 
+    @media ($mobile) {
+        background-image: url(http://eda.local/wp-content/uploads/2023/03/fundo-pagamento-mobile.png);
+        height: 41.25rem;
+        background-size: 100%;
+    }
+
     .content__faixa__pagamento {
         width: 100%;
         display: flex;
@@ -303,15 +457,30 @@
         justify-content: space-between;
         height: 100%;
 
+        @media ($mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .texto__pagamento {
             width: 45%;
             margin-top: 3.6844rem;
+
+            @media ($mobile) {
+                width: 100%;
+                margin-top: 3.9225rem;
+            }
 
             h2 {
                 @include font-roboto(1.875rem, 700);
                 color: $black;
                 text-transform: uppercase;
                 margin-bottom: 3rem;
+
+                @media ($mobile) {
+                    font-size: 1.25rem;
+                    margin-bottom: 1.5313rem;
+                }
             }
 
             .text {
@@ -319,6 +488,11 @@
                     @include font-roboto(1.5rem, 300);
                     color: $black;
                     line-height: 2.375rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
                 }
             }
         }
@@ -328,10 +502,19 @@
             position: relative;
             top: 9rem;
 
+            @media ($mobile) {
+                width: 100%;
+            }
+
             h2 {
                 @include font-roboto(1.875rem, 700);
                 color: $yellow;
                 margin-bottom: 1.48rem;
+
+                @media ($mobile) {
+                    font-size: 1.125rem;
+                    margin-bottom: 1.4812rem;
+                }
             }
 
             ul {
@@ -343,6 +526,12 @@
                     line-height: 2rem;
                     position: relative;
                     margin-left: 1.5625rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin-bottom: .5rem;
+                    }
 
                     &::before {
                         content: '';
@@ -365,14 +554,43 @@
     height: 31.625rem;
     overflow: hidden;
 
+    @media ($mobile) {
+        height: 100%;
+        margin: 2.1875rem auto 4.7375rem;
+        border-bottom: 0.125rem solid $yellow;
+    }
+
+    .image__mobile {
+        display: none;
+
+        @media ($mobile) {
+            display: block;
+            width: 100%;
+            margin-bottom: 2.5625rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     .content__manual {
         width: 100%;
         display: flex;
         position: relative;
 
+        @media ($mobile) {
+            flex-wrap: wrap;
+        }
+
         .image__desktop {
             position: absolute;
             left: -48.7rem;
+
+            @media ($mobile) {
+                display: none;
+            }
         }
 
         .description {
@@ -382,6 +600,11 @@
             width: 100%;
             max-width: 32.625rem;
 
+            @media ($mobile) {
+                margin: auto 0;
+                max-width: 100%;
+            }
+
             h2 {
                 @include font-roboto(2.125rem, 700);
                 color: $black;
@@ -389,6 +612,14 @@
                 max-width: 18.25rem;
                 line-height: 2.375rem;
                 margin-bottom: 1.25rem;
+
+                @media ($mobile) {
+                    font-size: 1.375rem;
+                    text-align: center;
+                    max-width: 19.5rem;
+                    margin: auto auto 1rem;
+                    line-height: 2rem;
+                }
             }
 
             .text {
@@ -398,6 +629,14 @@
                     @include font-roboto(1.5rem, 300);
                     color: $black;
                     line-height: 2rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        text-align: center;
+                        max-width: 18.75rem;
+                        margin: auto;
+                    }
                 }
             }
 
@@ -405,6 +644,13 @@
                 margin-top: 4.515rem;
                 width: 13.1875rem;
                 height: 3.5rem;
+
+                @media ($mobile) {
+                    width: 10.625rem;
+                    height: 2.8125rem;
+                    font-size: 1rem;
+                    margin: 1rem auto 3.5438rem;
+                }
             }
         }
     }

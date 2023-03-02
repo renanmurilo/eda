@@ -90,6 +90,10 @@ get_header();
             </section>
 
             <section class="section__showroom">
+                <div class="image__mobile">
+                    <img src="<?php the_field('imagem_showroom_mobile'); ?>" alt="">
+                </div>
+
                 <div class="shell">
                     <div class="content__showroom">
                         <h2><?php the_field('titulo_showroom'); ?></h2>

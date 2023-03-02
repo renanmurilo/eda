@@ -1,7 +1,7 @@
 <div class="produto">
     <a href="<?php the_permalink(); ?>">
         <div class="image">
-            <img src="<?php the_field('imagem_destaque_do_produto'); ?>" alt="<?php the_title(); ?>">
+            <img src="<?php the_field('imagem'); ?>" alt="<?php the_title(); ?>">
         </div>
 
         <div class="description">

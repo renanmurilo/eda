@@ -6,16 +6,37 @@
         justify-content: space-between;
         width: 100%;
 
+        @media ($mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .galeria {
             width: 100%;
             max-width: 38.875rem;
             display: flex;
             justify-content: space-between;
 
+            @media ($mobile) {
+                max-width: 100%;
+                flex-wrap: wrap;
+                order: 2;
+                margin-top: 1.5rem;
+            }
+
             .thumbs {
                 display: flex;
                 flex-direction: column;
                 max-width: 5.75rem;
+
+                @media ($mobile) {
+                    flex-direction: row;
+                    max-width: 20.125rem;
+                    order: 2;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin: auto;
+                }
 
                 .image {
                     max-width: 5.75rem;
@@ -24,6 +45,12 @@
                     margin-bottom: 2.6875rem;
                     cursor: pointer;
                     border: 0.0625rem solid $yellow;
+
+                    @media ($mobile) {
+                        max-width: 3.6875rem;
+                        height: 3.5rem;
+                        margin-bottom: 1.5994rem;
+                    }
 
                     &:last-child {
                         margin-bottom: 0;
@@ -47,10 +74,24 @@
                 align-items: center;
                 position: relative;
 
+                @media ($mobile) {
+                    max-width: 20.125rem;
+                    margin: auto auto 0.6875rem;
+                    order: 1;
+                    height: 17.0625rem;
+                }
+
                 .icon {
                     position: absolute;
                     bottom: 1.25rem;
                     right: 1.25rem;
+
+                    @media ($mobile) {
+                        width: 1.2869rem;
+                        height: 1.2862rem;
+                        right: 0.5625rem;
+                        bottom: 0.5625rem;
+                    }
                 }
 
                 img {
@@ -65,12 +106,25 @@
             width: 100%;
             max-width: 26.1875rem;
 
+            @media ($mobile) {
+                max-width: 100%;
+                margin-top: 2rem;
+            }
+
             h1 {
                 @include font-roboto(3.125rem, 700);
                 color: $black;
                 line-height: 3.125rem;
                 max-width: 24.3125rem;
                 margin-bottom: 1.4375rem;
+
+                @media ($mobile) {
+                    max-width: 19.125rem;
+                    font-size: 1.75rem;
+                    line-height: 2.375rem;
+                    margin-bottom: 0.6875rem;
+                    text-align: center;
+                }
             }
 
             h2 {
@@ -78,6 +132,12 @@
                 color: $black;
                 text-transform: uppercase;
                 margin-bottom: 2.5rem;
+
+                @media ($mobile) {
+                    max-width: 18.125rem;
+                    font-size: 1rem;
+                    text-align: center;
+                }
             }
 
             p {
@@ -85,10 +145,20 @@
                 color: $black;
                 line-height: 2rem;
                 margin-bottom: 2.6875rem;
+
+                @media ($mobile) {
+                    max-width: 18.125rem;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
             }
 
             .especificacoes {
                 margin-bottom: 3rem;
+
+                @media ($mobile) {
+                    margin-bottom: 1.5rem;
+                }
 
                 li {
                     display: flex;
@@ -96,10 +166,18 @@
                     width: 100%;
                     line-height: 1.75rem;
 
+                    @media ($mobile) {
+                        line-height: 1.125rem;
+                    }
+
                     h3 {
                         @include font-roboto(1.25rem, 700);
                         color: $black;
                         text-transform: uppercase;
+
+                        @media ($mobile) {
+                            font-size: 0.875rem;
+                        }
                     }
 
                     p {
@@ -107,6 +185,10 @@
                         color: $black;
                         padding: 0;
                         margin: 0 0 0 0.5rem;
+
+                        @media ($mobile) {
+                            font-size: 0.875rem;
+                        }
                     }
                 }
             }
@@ -115,6 +197,10 @@
                 @include font-roboto(1.25rem, 300);
                 color: $black;
                 text-decoration: underline;
+
+                @media ($mobile) {
+                    font-size: 0.875rem;
+                }
             }
         }
     }
@@ -124,6 +210,10 @@
     width: 100%;
     margin: 5.5156rem 0 4.75rem;
 
+    @media ($mobile) {
+        margin: 0 auto 4.0231rem;
+    }
+
     .content__imagens {
         width: 100%;
 
@@ -132,10 +222,21 @@
             margin-bottom: 1.625rem;
             position: relative;
 
+            @media ($mobile) {
+                margin-bottom: 0.425rem;
+            }
+
             .icon {
                 position: absolute;
                 bottom: 1.25rem;
                 right: 1.25rem;
+
+                @media ($mobile) {
+                    width: 1.2869rem;
+                    height: 1.2869rem;
+                    right: 0.5625rem;
+                    bottom: 0.5625rem;
+                }
             }
 
             img {
@@ -156,6 +257,11 @@
             color: $black;
             text-transform: uppercase;
             margin-bottom: 2.9844rem;
+
+            @media ($mobile) {
+                font-size: 1.25rem;
+                margin-bottom: 1.035rem;
+            }
         }
 
         .inner__descricao__produto {
@@ -164,6 +270,10 @@
             flex-direction: column;
             flex-wrap: wrap;
 
+            @media ($mobile) {
+                max-height: 100%;
+            }
+
             p {
                 @include font-roboto(1.5rem, 300);
                 color: $black;
@@ -171,6 +281,14 @@
                 margin-left: 2.5rem;
                 margin-bottom: 1.5rem;
                 max-width: 25.1875rem;
+
+                @media ($mobile) {
+                    font-size: 1rem;
+                    max-width: 100%;
+                    line-height: 1.5rem;
+                    margin-bottom: .5rem;
+                    margin-left: 1.5rem;
+                }
 
                 &::before {
                     content: '';
@@ -182,6 +300,13 @@
                     top: 0;
                     bottom: 0;
                     margin: auto;
+
+                    @media ($mobile) {
+                        width: 0.4375rem;
+                        height: 0.4375rem;
+                        margin-left: 1rem;
+                        top: -0.3125rem;
+                    }
                 }
             }
         }
@@ -192,6 +317,10 @@
     width: 100%;
     margin: 5.5625rem 0 4.75rem;
 
+    @media ($mobile) {
+        margin: 4.0025rem 0;
+    }
+
     .content__informacoes__produto {
         width: 100%;
 
@@ -200,6 +329,13 @@
             color: $black;
             text-transform: uppercase;
             margin-bottom: 2.0469rem;
+
+            @media ($mobile) {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                max-width: 13.25rem;
+                margin-bottom: 0.9375rem;
+            }
         }
 
         .inner__informacoes__produto {
@@ -214,6 +350,11 @@
                 padding: 0.875rem 2.0625rem 1rem;
                 background-color: $background;
 
+                @media ($mobile) {
+                    padding: 1.25rem 0.8125rem;
+                    justify-content: space-between;
+                }
+
                 &:nth-child(even) {
                     background-color: $white
                 }
@@ -227,11 +368,25 @@
                     text-align: left;
                     letter-spacing: 0.0275rem;
                     margin-right: 4rem;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        color: $text-dark;
+                        margin-right: 0;
+                        max-width: 34%;
+                    }
                 }
 
                 p {
                     @include font-roboto(1.25rem, 300);
                     color: $black;
+
+                    @media ($mobile) {
+                        font-size: 0.875rem;
+                        color: $text-dark;
+                        max-width: 45%;
+                        text-align: right;
+                    }
                 }
             }
         }
@@ -241,6 +396,10 @@
 .section__veja {
     width: 100%;
     margin-bottom: 8.1913rem;
+
+    @media ($mobile) {
+        margin-bottom: 3.9906rem;
+    }
 
     .content__veja {
         width: 100%;
@@ -253,9 +412,19 @@
         .inner__veja {
             margin-top: 2.7931rem;
 
+            @media ($mobile) {
+                margin-top: 1.9806rem;
+            }
+
             .produto {
                 width: 11.9113rem;
                 height: 17.8319rem;
+
+                @media ($mobile) {
+                    width: 11.9113rem;
+                    height: 17.1444rem;
+                    margin: auto auto 2rem;
+                }
 
                 a {
                     width: 100%;
@@ -269,6 +438,11 @@
                         align-items: center;
                         justify-content: center;
 
+                        @media ($mobile) {
+                            max-width: 11.9113rem;
+                            height: 13.6862rem;
+                        }
+
                         img {
                             object-fit: cover;
                         }
@@ -276,6 +450,10 @@
 
                     .description {
                         margin-top: 1.145rem;
+
+                        @media ($mobile) {
+                            margin-top: 1.8325rem;
+                        }
 
                         h3 {
                             @include font-roboto(1.25rem, 500);
@@ -301,7 +479,7 @@
                     left: -2.5rem;
 
                     @media ($mobile) {
-                        left: -1rem;
+                        left: .3rem;
                     }
 
                     span {
@@ -329,7 +507,7 @@
                     position: relative;
 
                     @media ($mobile) {
-                        right: 1rem;
+                        right: 2rem;
                     }
 
                     span {
