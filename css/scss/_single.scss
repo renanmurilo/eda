@@ -1,11 +1,24 @@
 .trocar__modelo {
     position: absolute;
     top: 13.5rem;
-    right: 9rem;
+    right: calc(50% - 34rem);
+
+    @media ($mobile) {
+        right: initial;
+        position: relative;
+        top: initial;
+        margin-top: 1.1875rem;
+        display: flex;
+        justify-content: center;
+    }
 
     .btn__primary {
         width: 13.8125rem;
         height: 3.5rem;
+
+        @media ($mobile) {
+            height: 2.4375rem;
+        }
     }
 
     .content__modelos {
@@ -22,6 +35,12 @@
         max-height: 39.5625rem;
         overflow-y: auto;
         transition: all .4s;
+
+        @media ($mobile) {
+            left: 0;
+            margin: auto;
+            z-index: 9;
+        }
 
         &.active {
             height: 39.5625rem;

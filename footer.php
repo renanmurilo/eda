@@ -43,7 +43,7 @@
                     <div class="menu__footer">
                          <ul class="list__menu">
                             <li class="item__menu">
-                                <a href="<?php echo get_home_url(); ?>/fale-conosco/">Seja um representante</a>
+                                <a href="<?php echo get_home_url(); ?>/fale-conosco/?representante">Seja um representante</a>
                             </li>
 
                             <li class="item__menu">

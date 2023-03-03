@@ -1,3 +1,84 @@
+.section__fornos__e__tornos__banner {
+    width: 100%;
+
+    .content__banner {
+        width: 100%;
+
+        .banner__image {
+            width: 100%;
+            position: relative;
+
+            .banner__desktop {
+                @media ($desktopLarge) {
+                    height: 100%;
+                }
+
+                @media ($mobile) {
+                    display: none;
+                }
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .banner__mobile {
+                display: none;
+
+                @media ($mobile) {
+                    display: block;
+                }
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+
+
+        .owl-dots {
+            bottom: 1.875rem;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 3.75rem;
+            width: 100%;
+
+            @media ($mobile) {
+                bottom: 2.5rem;
+                left: 0;
+            }
+
+            .owl-dot {
+                width: 0.8125rem;
+                height: 0.8125rem;
+                background-color: transparent;
+                border: 0.0625rem solid $black;
+                border-radius: 100%;
+                margin: 0 0.3125rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    background-color: $black;
+                    opacity: .7;
+                }
+
+                &>button {
+                    border-radius: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .section__fornos {
     width: 100%;
     margin-top: 6.9294rem;

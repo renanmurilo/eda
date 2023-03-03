@@ -2,11 +2,13 @@
 get_header();
 ?>
     <main>
+        <?php include(TEMPLATEPATH . '/include/breadcrumb.php'); ?>
+        
         <section class="section__header__category">
             <div class="shell">
                 <div class="content__header__category">
                     <h1>
-                        Busca
+                       Resultado Busca
                     </h1>
                 </div>
 
@@ -73,12 +75,10 @@ get_header();
 
                     <div class="inner__category">
                         <?php
-                            $orderby = isset($_GET['orderby']) ? $_GET['orderby'] : 'title';
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                             $args = array (
                                 'post_type' => 'ferramentas',
                                 'order' => 'DESC',
-                                'orderby' => $orderby,
                                 'posts_per_page' => 9,
                                 'paged' => $paged,
                             );

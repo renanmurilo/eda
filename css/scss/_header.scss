@@ -137,11 +137,9 @@
                 display: none;
 
                 @media ($mobile) {
-                    display: none;
                     position: fixed;
                     top: 18.97px;
                     right: calc(50% - 11rem);
-                    color: $primary;
                     z-index: 4;
                     transform: translateX(62.5rem);
                     transition: all .4s;
@@ -243,6 +241,7 @@
                     right: 0;
                     top: 0.25rem;
                     left: 0;
+                    box-shadow: 0px 3px 6px #00000029;
                     z-index: -1;
                 }
 
@@ -273,7 +272,42 @@
                         color: $text !important;
                     }
                 }
+
+                div.asl_m .probox .proclose svg {
+                    background-color: $white;
+                }
             }
         }
+    }
+}
+
+div.asl_r.vertical {
+    background: $white !important;
+    top: 6.375rem !important;
+
+    @media ($mobile) {
+        top: 5.25rem !important;
+    }
+}
+
+div.asl_r .results .item .asl_content {
+    display: flex;
+    align-items: center;
+}
+
+div[id*='ajaxsearchliteres'].wpdreams_asl_results .results img.asl_image {
+    border: 0.0625rem solid $border;
+}
+
+div.asl_r .results .item .asl_content h3,
+div.asl_r .results .item .asl_content h3 a {
+    @include font-roboto(0.875rem, 300);
+    color: $text-dark !important;
+    line-height: 1.125rem;
+}
+
+@media ($mobile) {
+    div.asl_r.asl_w.vertical .results .item {
+        width: 100% !important;
     }
 }

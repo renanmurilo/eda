@@ -4,7 +4,7 @@ get_header();
 ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
         <main>
-            <section class="section__home__banner">
+            <section class="section__fornos__e__tornos__banner">
                 <div class="content__banner slide-banners">
                     <?php if(have_rows('banners')): while(have_rows('banners')) : the_row(); ?>
                         <a href="<?php the_sub_field('link'); ?>" class="banner__image">

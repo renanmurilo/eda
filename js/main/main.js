@@ -22,15 +22,15 @@ closeMenu.addEventListener('click', (e) => {
     logo.classList.toggle('active')
 });
 
-let openProducts = document.getElementById('openProducts')
-let contentModelos = document.querySelector('.content__modelos')
-console.log(openProducts);
-console.log(contentModelos);
+$(document).ready(function() {
+    let openProducts = document.getElementById('openProducts');
+    let contentModelos = document.querySelector('.content__modelos');
 
-openProducts.addEventListener('click', (e) => {
-    e.preventDefault()
+    openProducts.addEventListener('click', (e) => {
+        e.preventDefault()
 
-    contentModelos.classList.toggle('active')
+        contentModelos.classList.toggle('active')
+    });
 });
 
 $('[data-group]').each(function () {
@@ -63,7 +63,6 @@ $('[data-grupo]').each(function () {
         $click = $(this).find('[data-open]'),
         activeClass = 'active';
     
-
     $allClick.click(function (e) {
         e.preventDefault();
 
@@ -90,7 +89,22 @@ $('[data-grupo]').each(function () {
 
         $teste.addClass(activeClass);
         $(this).addClass(activeClass)
-    })
+    });
+});
+
+$(document).ready(function() {
+    const main = document.querySelector('[data-grupo="contato"]')
+    const btnFerramentas =document.querySelector('[data-click="ferramentas"]')
+    const btnRepresentante =document.querySelector('[data-open="representante-ferramentas"]')
+
+    if (main.classList.contains('contact')) {
+        let url = location.search
+        
+        if(url) {
+            $(btnFerramentas).trigger('click');
+            $(btnRepresentante).trigger('click');
+        }
+    }
 });
 
 $(document).ready(function() {
@@ -111,7 +125,7 @@ $(document).ready(function() {
 
     imgs.forEach(img => img.addEventListener('click', imgClick));
 
-    function imgClick (e) {
+    function imgClick(e) {
         imgs.forEach(img => (img.style.opacity = 1));
         current.src = e.target.src;
         current.classList.add('fade-in');

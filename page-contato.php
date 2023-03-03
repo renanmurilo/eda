@@ -3,7 +3,7 @@
 get_header();
 ?>
     <?php if(have_posts()) { while (have_posts()) { the_post(); ?>
-        <main data-grupo="contato">
+        <main data-grupo="contato" class="contact">
             <div class="separador"></div>
             <section class="banner__contato">
                 <div class="shell">
