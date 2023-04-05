@@ -29,6 +29,12 @@
                 display: flex;
                 flex-direction: column;
                 max-width: 5.75rem;
+                max-height: 33.4375rem;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                }
 
                 @media ($mobile) {
                     flex-direction: row;
@@ -97,7 +103,6 @@
 
                 img {
                     object-fit: cover;
-                    height: 100%;
                     max-width: 100%;
                 }
             }
@@ -242,6 +247,7 @@
 
             img {
                 object-fit: cover;
+                width: 100%;
             }
         }
     }
@@ -267,7 +273,8 @@
 
         .inner__descricao__produto {
             display: flex;
-            max-height: 27.9375rem;
+            max-height: 46.9375rem;
+            min-height: 27.9375rem;
             flex-direction: column;
             flex-wrap: wrap;
 

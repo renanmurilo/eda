@@ -79,6 +79,15 @@
                     margin-top: 0.875rem;
                 }
 
+                span {
+                    display: none;
+
+                    @media ($mobile) {
+                        display: block;
+                        margin-left: 0.3125rem;
+                    }
+                }
+
                 &.active {
                     background-color: $yellow;
                     border: none;
@@ -114,6 +123,10 @@
                     justify-content: flex-start;
                 }
 
+                @media($mobileMin) {
+                    max-width: 7.5rem;
+                }
+
                 .btn__form {
                     @include font-roboto(1.125rem, 700);
                     color: $black;
@@ -125,6 +138,11 @@
                     @media ($mobile) {
                         font-size: 1rem;
                         line-height: 1.25rem;
+                    }
+
+                    @media ($mobileMin) {
+                        font-size: 0.875rem;
+                        line-height: 1rem;
                     }
 
                     &.active {
@@ -165,6 +183,11 @@
                     @media ($mobile) {
                         font-size: 0.875rem;
                         line-height: 1.125rem;
+                    }
+
+                    @media ($mobileMin) {
+                        font-size: 0.625rem;
+                        line-height: 0.875rem;
                     }
                 }
             }
@@ -527,9 +550,12 @@
     background-size: cover;
     height: 29.1875rem;
 
+    @media ($laptopMediumMax) and ($laptopMax) {
+        height: 31.1875rem;
+    }
+
     @media ($desktopLarge) {
         height: 41rem;
-        background-size: 100%;
     }
 
     @media ($mobile) {
@@ -563,6 +589,10 @@
             color: $black;
             margin-bottom: 2.5rem;
             padding-top: 8rem;
+
+            @media ($laptopMediumMax) and ($laptopMax) {
+                padding-top: 9rem;
+            }
 
             @media ($desktopLarge) {
                 padding-top: 15rem;
@@ -617,7 +647,7 @@
         background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/03/fundo-importandora-mobile.png);
         height: 49.9375rem;
         margin: 3.5625rem 0;
-        background-size: 100%;
+        background-size: cover;
     }
 
     .content__importadora__eda {

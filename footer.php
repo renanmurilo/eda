@@ -10,15 +10,15 @@
                         </div>
 
                         <div class="icons">
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/company/importadoraeda" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
                             </a>
 
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/impeda/" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
 
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/eda_importadora/" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Instagram">
                             </a>
                         </div>
@@ -75,11 +75,11 @@
                         </div>
 
                         <div class="icons">
-                            <a href="" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
+                            <a href="https://www.instagram.com/skutt.brasil/" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Linkedin">
                             </a>
 
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/Skutt.Inc" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
                         </div>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="copy">
-                    <p>Copyright 2022 Importadora Eda</p> <a href="http://" target="_blank" rel="noopener noreferrer">Design by Eólica</a>
+                    <p>Copyright 2022 Importadora Eda</p> <a href="https://www.grupoeolica.com.br/" target="_blank" rel="noopener noreferrer">Design by Eólica</a>
                 </div>
             </div>
         </div>

@@ -94,7 +94,7 @@
         }
 
         .card {
-            max-width: 12.4106rem;
+            width: 12.4106rem;
             height: 18rem;
             margin-right: 5.7763rem;
             margin-bottom: 3.5625rem;
@@ -123,6 +123,9 @@
                 .image {
                     height: 14.9375rem;
                     width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     border: 0.125rem solid $yellow;
 
                     @media ($mobile) {
@@ -438,7 +441,7 @@
 
 .section__faixa__pagamento {
     width: 100%;
-    background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/02/fundo-pagamento-desktop.png);
+    background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/02/fundo-pagamento-desktop.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -449,9 +452,8 @@
     }
 
     @media ($mobile) {
-        background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/03/fundo-pagamento-mobile.png);
+        background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/03/fundo-pagamento-mobile.png);
         height: 41.25rem;
-        background-size: 100%;
     }
 
     .content__faixa__pagamento {

@@ -148,7 +148,7 @@ get_header();
                             <div class="text">
                                 <?php the_field('texto_manual'); ?>
                             </div>
-                            <a href="<?php the_field('arquivo_manual'); ?>" class="btn btn__primary" download>Baixe o manual</a>
+                            <a href="<?php the_field('arquivo_manual'); ?>" class="btn btn__primary" target="_blank">Baixe o manual</a>
                         </div>
                     </div>
                 </div>

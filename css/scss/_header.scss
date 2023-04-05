@@ -207,7 +207,7 @@
                     }
 
                     a {
-                        @include font-roboto(0.75rem, 500);
+                        @include font-roboto(0.75rem, 400);
                         color: $white;
                         text-transform: uppercase;
                         transition: all .4s;

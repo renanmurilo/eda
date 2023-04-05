@@ -7,7 +7,7 @@ get_header();
             <section class="section__fornos__e__tornos__banner">
                 <div class="content__banner slide-banners">
                     <?php if(have_rows('banners')): while(have_rows('banners')) : the_row(); ?>
-                        <a href="<?php the_sub_field('link'); ?>" class="banner__image">
+                        <a href="<?php echo get_home_url(); ?><?php the_sub_field('link_do_banner'); ?>" class="banner__image">
                             <img class="banner__desktop" src="<?php the_sub_field('imagem_desktop'); ?>" alt="">
                             <img class="banner__mobile" src="<?php the_sub_field('imagem_mobile'); ?>" alt="">
                         </a>
@@ -23,7 +23,7 @@ get_header();
                         <h2><?php the_field('titulo_nossas_ferramentas'); ?></h2>
                         <div class="inner__nossas__ferramentas">
                             <?php if(have_rows('nossas_ferramentas')): while(have_rows('nossas_ferramentas')) : the_row(); ?>
-                            <a href="<?php the_sub_field('link_da_categoria'); ?>" class="box">
+                            <a href="<?php echo get_home_url(); ?><?php the_sub_field('link_da_categoria'); ?>" class="box">
                                 <div class="image">
                                     <img class="image__primary" src="<?php the_sub_field('icone_primario'); ?>" alt="<?php the_sub_field('nome'); ?>">
                                     <img class="image__secondary" src="<?php the_sub_field('icone_secundario'); ?>" alt="<?php the_sub_field('nome'); ?>">
@@ -50,7 +50,7 @@ get_header();
                         <div class="text">
                             <?php the_field('texto_catalogo'); ?>
                         </div>
-                        <a href="<?php the_field('arquivo_catalogo'); ?>" class="btn btn__primary" download>Baixe o catálogo</a>
+                        <a href="<?php the_field('arquivo_catalogo'); ?>" class="btn btn__primary" target="_blank">Baixe o catálogo</a>
                     </div>
                 </div>
             </section>
@@ -63,7 +63,7 @@ get_header();
                             <?php the_field('texto_representante'); ?>
                         </div>
 
-                        <a href="<?php echo get_home_url(); ?>" class="btn btn__black">Saiba mais</a>
+                        <a href="<?php echo get_home_url(); ?>/fale-conosco" class="btn btn__black">Saiba mais</a>
                     </div>
                 </div>
             </section>

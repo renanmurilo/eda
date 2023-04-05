@@ -42,3 +42,11 @@
         line-height: 2.375rem;
     }
 }
+
+@mixin font-barlow($font-size: 3.125rem,
+    $font-weight: 700,
+) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: 'Barlow', sans-serif;
+}

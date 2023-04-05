@@ -127,13 +127,13 @@
                         flex-direction: row;
                         flex-wrap: wrap;
                         margin-right: auto;
-                        justify-content: center;
+                        justify-content: space-between;
                         width: 100%;
                     }
 
                     .item__menu {
                         @media ($mobile) {
-                            width: 50%;
+                            width: 47%;
 
                             &:nth-child(1) {
                                 order: 1;

@@ -16,6 +16,17 @@
 
         h1 {
             @include title-destaque;
+
+            @media ($mobile) {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                &::before {
+                    left: 0;
+                    right: 0;
+                }
+            }
         }
 
         .order__by {
@@ -43,6 +54,7 @@
                     border: 0.125rem solid $yellow;
                     text-transform: uppercase;
                     padding-left: .5rem;
+                    background-color: $white;
                     background-repeat: no-repeat;
                     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA5IDgiPgogIDxwYXRoIGlkPSJQb2zDrWdvbm9fNCIgZGF0YS1uYW1lPSJQb2zDrWdvbm8gNCIgZD0iTTQuNSwwLDksOEgwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOSA4KSByb3RhdGUoLTE4MCkiLz4KPC9zdmc+Cg==);
                     background-size: 8px;
@@ -669,10 +681,11 @@
                 }
 
                 &:nth-child(4) {
+
                     a {
-                        max-width: 9.375rem;
+                        max-width: 8rem;
                         position: relative;
-                        top: 22px;
+                        top: 21px;
 
                         &::before {
                             content: '';

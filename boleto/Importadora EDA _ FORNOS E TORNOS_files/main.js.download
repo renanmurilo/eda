@@ -1,0 +1,63 @@
+$(document).ready(function() {
+  // menu
+  $('.menu-anchor').on('click touchstart', function(e){
+    $('html').toggleClass('menu-active');
+      e.preventDefault();
+  });
+  $('body').on('swiperight', function(e){
+    $('html').addClass('menu-active');
+  });
+  
+  $('body').on('swipeleft', function(e){
+    $('html').removeClass('menu-active');
+  });
+  
+  // login
+  $(".area-do-cliente").click(function() {
+    $(".wp-login-form").slideToggle(400);
+  });
+  
+  // produto
+  $(".item-see-text").click(function() {
+    $(".item-see-text").addClass("inactive");
+    $(".item-see-photo").removeClass("inactive");
+    $(".item-description").show();
+    $(".item-image").hide();
+  });
+  $(".item-see-photo").click(function() {
+    $(".item-see-text").removeClass("inactive");
+    $(".item-see-photo").addClass("inactive");
+    $(".item-description").hide();
+    $(".item-image").show();
+  });
+
+  $('#user_login').attr( 'placeholder', 'Login' );
+  $('#user_pass').attr( 'placeholder', 'Senha' );
+
+  $(".m-icon-search").click(function() {
+    $(".m-search").slideToggle(400); 
+  }); 
+
+  // mobile
+
+  $('.btn-veja').click( function() {
+    $('.category-list-mobile .list').slideToggle();
+  });
+  
+	// smooth scroll
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+
+});

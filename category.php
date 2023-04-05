@@ -52,17 +52,6 @@ bcn_display();
                             ]);
                         ?>
                     </div>
-                    
-                    <div class="nav__filtros">
-                        <h3>Marca</h3>
-                        <?php
-                            wp_nav_menu([
-                                'menu' => 'marcas',
-                                'menu_class' => 'marcas-cat',
-                                'container' => false,
-                            ]);
-                        ?>
-                    </div>
                 </div>
 
                 <div class="menu__category">
@@ -87,16 +76,6 @@ bcn_display();
                             wp_nav_menu([
                                 'menu' => 'categorias',
                                 'menu_class' => 'filtro-cat',
-                                'container' => false,
-                            ]);
-                        ?>
-                        
-                        <h3>Marca</h3>
-
-                        <?php
-                            wp_nav_menu([
-                                'menu' => 'marcas',
-                                'menu_class' => 'marcas-cat',
                                 'container' => false,
                             ]);
                         ?>
@@ -132,7 +111,7 @@ bcn_display();
                                 ?>
                             </div>
                         <?php else : endif; ?>
-                        <?php  wp_reset_postdata(); ?>
+                        <?php wp_reset_postdata(); ?>
                     </div>
                 </div>
             </div>

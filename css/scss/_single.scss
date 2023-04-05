@@ -57,6 +57,14 @@
                 width: 6.6875rem;
                 height: 7.25rem;
                 border: 0.0625rem solid $yellow;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                    max-width: 100%;
+                }
             }
 
             .description {
@@ -92,12 +100,16 @@
         }
 
         .image {
+            width: 100%;
             max-width: 32.125rem;
             height: 30.75rem;
             border: 0.0625rem solid $yellow;
             position: relative;
+            display: flex;
+            justify-content: center;
 
             @media ($mobile) {
+                width: 100%;
                 max-width: 17.5rem;
                 height: 17.0625rem;
                 order: 2;
@@ -105,7 +117,7 @@
             }
 
             img {
-                width: 100%;
+                max-width: 100%;
                 object-fit: cover;
                 height: 100%;
             }
@@ -124,6 +136,7 @@
         }
 
         .aside__bar {
+            width: 100%;
             max-width: 28.4375rem;
 
             @media ($mobile) {
@@ -254,6 +267,8 @@
                     max-width: 16.0625rem;
                     height: 8.875rem;
                     margin-right: 1rem;
+                    display: flex;
+                    flex-wrap: wrap;
 
                     @media ($mobile) {
                         max-width: 100%;
@@ -267,6 +282,7 @@
                         color: $black;
                         text-transform: uppercase;
                         margin-bottom: 2rem;
+                        width: 100%;
 
                         @media ($mobile) {
                             font-size: 0.9375rem;
@@ -276,12 +292,13 @@
                     .externa {
                         display: flex;
                         flex-wrap: wrap;
-                        flex-direction: column;
+                        max-height: 8.875rem;
 
                         p {
                             @include font-roboto(1.5rem, 300);
                             color: $black;
                             line-height: 2rem;
+                            width: 50%;
 
                             @media ($mobile) {
                                 font-size: 1rem;
@@ -456,7 +473,7 @@
 
                 .title {
                     width: 100%;
-                    max-width: 8.125rem;
+                    max-width: 15.125rem;
                     margin-right: 6.25rem;
 
                     @media ($mobile) {
@@ -480,7 +497,7 @@
                     @include font-roboto(1.25rem, 300);
                     color: $black;
                     line-height: 2rem;
-                    max-width: 28rem;
+                    max-width: 42rem;
 
                     @media ($mobile) {
                         font-size: 0.875rem;

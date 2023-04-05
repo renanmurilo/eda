@@ -41,8 +41,6 @@ get_header(); ?>
                             </li>
                             <?php endwhile; else : endif; ?>
                         </ul>
-
-                        <a href="" class="link">Ver mais</a>
                     </aside>
                 </div>
             </div>
@@ -51,14 +49,15 @@ get_header(); ?>
         <section class="section__imagens">
             <div class="shell"> 
                 <div class="content__imagens">
-                    <?php if(have_rows('imagens_destaque')): while(have_rows('imagens_destaque')) : the_row(); ?>
-                    <div class="image">
-                        <img src="<?php the_sub_field('imagem'); ?>" alt="">
+                    <?php if(have_rows('imagens_do_produto')): while(have_rows('imagens_do_produto')) : the_row(); ?>
+                        <div class="image">
+                            <img src="<?php the_sub_field('imagem'); ?>" alt="">
 
                         <div class="icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down-white.svg" alt="icon">
                         </div>
-                    </div>
+                        
+                        </div>
                     <?php endwhile; else : endif; ?>
                 </div>
             </div>

@@ -8,6 +8,10 @@
             width: 100%;
             position: relative;
 
+            @media ($mobile) {
+                height: 556px;
+            }
+
             .banner__desktop {
                 @media ($desktopLarge) {
                     height: 100%;
@@ -27,12 +31,152 @@
 
                 @media ($mobile) {
                     display: block;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: auto;
                 }
             }
 
             img {
                 object-fit: cover;
                 width: 100%;
+
+                @media ($mobile) {
+                    height: 100%;
+                }
+            }
+
+            .description {
+                position: absolute;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                top: 0;
+                height: 100%;
+                z-index: 1;
+                left: calc(50% - 30.625rem);
+
+                @media ($mobile) {
+                    left: initial;
+                    justify-content: flex-start;
+                    top: 12.2263rem;
+                    margin: auto;
+                    right: inherit;
+                }
+
+                &.active {
+                    align-items: center;
+                    left: initial;
+
+                    @media ($mobile) {
+                        top: 5.3675rem;
+                    }
+
+                    h3 {
+                        color: $white;
+                        text-align: center;
+
+                        @media ($mobile) {
+                            margin-left: 0;
+                        }
+                    }
+
+                    h1 {
+                        color: $yellow;
+                        max-width: 46.875rem;
+                        text-align: center;
+
+                        @media ($mobile) {
+                            max-width: 17.5rem;
+                            margin: 0;
+                        }
+                    }
+
+                    .text {
+                        max-width: 34.125rem;
+
+                        @media ($mobile) {
+                            max-width: 17.5rem;
+                            margin: 1.5rem auto 3rem;
+                        }
+
+                        p {
+                            color: $white;
+                            text-align: center;
+                        }
+                    }
+
+                    .btn__black {
+                        display: none;
+                    }
+
+                    .btn__primary {
+                        display: flex;
+                    }
+                }
+
+                h3 {
+                    color: $black;
+                    @include font-barlow(1.1875rem, 700);
+                    margin-bottom: 0.875rem;
+
+                    @media ($mobile) {
+                        font-size: 1rem;
+                        margin-bottom: 1rem;
+                        margin-left: 10%;
+                    }
+                }
+
+                h1 {
+                    @include font-barlow;
+                    color: $black;
+                    line-height: 4.0625rem;
+                    max-width: 29.8125rem;
+                    text-align: left;
+
+                    @media ($mobile) {
+                        font-size: 1.75rem;
+                        line-height: 2rem;
+                        margin-left: 10%;
+                        max-width: 16.125rem;
+                    }
+                }
+
+                .text {
+                    max-width: 30rem;
+                    margin: 1rem 0 2rem;
+
+                    @media ($mobile) {
+                        margin: 1.5rem 0 1.5rem 10%;
+                        max-width: 17.5rem;
+                    }
+
+                    p {
+                        @include font-roboto(1.5rem, 300);
+                        color: $black;
+                        text-align: left;
+                        line-height: 1.8125rem;
+
+                        @media ($mobile) {
+                            font-size: 1rem;
+                            line-height: 1rem;
+                        }
+                    }
+                }
+
+                .btn__black {
+                    display: flex;
+
+                    @media ($mobile) {
+                        margin-left: 10%;
+                    }
+                }
+
+                .btn__primary {
+                    display: none;
+                }
             }
         }
 
@@ -216,7 +360,7 @@
 
 .section__home__sobre {
     width: 100%;
-    background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/02/fundo-sobre-home-desktop.png);
+    background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/02/fundo-sobre-home-desktop.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -229,7 +373,7 @@
     }
 
     @media($mobile) {
-        background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/03/fundo-sobre-home-mobile.png);
+        background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/03/fundo-sobre-home-mobile.png);
         height: 51.875rem;
         padding-top: 4.5056rem;
     }
@@ -374,7 +518,11 @@
                     color: $black;
                     text-transform: uppercase;
                     line-height: 2rem;
-                    margin: 2.3625rem auto 2.05rem;
+                    margin: 2.3625rem auto 1rem;
+
+                    &::before {
+                        display: none;
+                    }
 
                     @media ($mobile) {
                         margin: 2.5rem auto 0.9375rem;

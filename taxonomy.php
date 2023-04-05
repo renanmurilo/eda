@@ -30,26 +30,14 @@ get_header();
 
                 <div class="filtros__mobile">
                     <div class="nav__filtros">
-                        <h3>CATEGORIAS</h3>
-                            <?php
-                                wp_nav_menu([
-                                    'menu' => 'categorias',
-                                    'menu_class' => 'filtro-cat',
-                                    'container' => false,
-                                ]);
-                            ?>
-                        </div>
-
-                        <div class="nav__filtros">
-                            <h3>Marca</h3>
-                            <?php
-                                wp_nav_menu([
-                                    'menu' => 'marcas',
-                                    'menu_class' => 'marcas-cat',
-                                    'container' => false,
-                                ]);
-                            ?>
-                        </div>
+                    <h3>CATEGORIAS</h3>
+                        <?php
+                            wp_nav_menu([
+                                'menu' => 'categorias',
+                                'menu_class' => 'filtro-cat',
+                                'container' => false,
+                            ]);
+                        ?>
                     </div>
                 </div>
 
@@ -75,16 +63,6 @@ get_header();
                             wp_nav_menu([
                                 'menu' => 'categorias',
                                 'menu_class' => 'filtro-cat',
-                                'container' => false,
-                            ]);
-                        ?>
-
-                        <h3>Marca</h3>
-
-                        <?php
-                            wp_nav_menu([
-                                'menu' => 'marcas',
-                                'menu_class' => 'marcas-cat',
                                 'container' => false,
                             ]);
                         ?>

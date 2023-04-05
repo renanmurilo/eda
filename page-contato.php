@@ -12,7 +12,7 @@ get_header();
                         <p><?php the_field('texto_banner'); ?></p>
 
                         <div class="row__buttons">
-                            <a data-click="ferramentas" class="btn btn__outline__black">Ferramentas</a>
+                            <a data-click="ferramentas" class="btn btn__outline__black">Ferramentas <span>Pneumáticas</span></a>
                             <a data-click="fornos" class="btn btn__outline__black">Fornos</a>
                         </div>
 
