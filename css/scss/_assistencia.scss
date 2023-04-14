@@ -1,6 +1,6 @@
 .section__banner__assistencia {
     width: 100%;
-    background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/02/banner-assistencia.png);
+    background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/02/banner-assistencia.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 100%;
@@ -10,7 +10,7 @@
     }
 
     @media ($mobile) {
-        background-image: url(http://eda.infinityfreeapp.com/wp-content/uploads/2023/03/banner-assistencia-mobile.png);
+        background-image: url(https://impeda.com.br/beta/wp-content/uploads/2023/03/banner-assistencia-mobile.png);
         height: 28.8125rem;
     }
 
@@ -351,9 +351,10 @@
                             flex-wrap: wrap;
                             justify-content: flex-start;
                             margin-bottom: 0.3125rem;
+                            width: 45%;
 
                             &:last-child {
-                                max-width: 9.375rem;
+                                max-width: 10rem;
                                 margin-left: 3.75rem;
 
                                 @media ($mobile) {
@@ -361,6 +362,10 @@
                                     margin-left: 0;
                                     margin-top: 1.5rem;
                                     margin-bottom: 1rem;
+                                }
+
+                                p {
+                                    margin-left: 0;
                                 }
                             }
 

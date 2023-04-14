@@ -46,11 +46,10 @@ get_header();
                                     <th>Preço</th>
                                     <th>Preço <br> com ssx</th>
                                     <th>Tamanho do <br>prato</th>
-                                    <th>Recipiente</th>
-                                    <th>Motor</th>
+                                    <th>Bacia</th>
+                                    <th>Potência do <br>Motor</th>
                                     <th>Sentido de <br>rotação</th>
-                                    <th>Potência (w)</th>
-                                    <th>Capacidade de <br>argila</th>
+                                    <th>Capacidade</th>
                                 </thead>
 
                                 <tbody>
@@ -60,11 +59,10 @@ get_header();
                                         <td><?php the_sub_field('preco'); ?></td>
                                         <td><?php the_sub_field('preco_com_ssx'); ?></td>
                                         <td><?php the_sub_field('tamanho_do_prato'); ?></td>
-                                        <td><?php the_sub_field('recipiente'); ?></td>
-                                        <td><?php the_sub_field('motor'); ?></td>
+                                        <td><?php the_sub_field('bacia'); ?></td>
+                                        <td><?php the_sub_field('potencia'); ?></td>
                                         <td><?php the_sub_field('sentido_de_rotacao'); ?></td>
-                                        <td><?php the_sub_field('potencia_w'); ?></td>
-                                        <td><?php the_sub_field('capacidade_de_brargila'); ?></td>
+                                        <td><?php the_sub_field('capacidade'); ?></td>
                                     </tr>
                                     <?php endwhile; else : endif; ?>
                                 </tbody>
@@ -88,6 +86,53 @@ get_header();
                                 <p><?php the_sub_field('valor'); ?></p>
                             </div>
                             <?php endwhile; else : endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			
+            <section class="section__informacoes">
+                <div class="shell">
+                    <div class="content__informacoes">
+                        <h2>Informações importantes</h2>
+                        
+                        <div class="inner__informacoes">
+                            <?php if(have_rows('informacoes_importantes')): while(have_rows('informacoes_importantes')) : the_row(); ?>
+                            <div class="box">
+                                <div class="image">
+                                    <img src="<?php the_sub_field('icone'); ?>" alt="<?php the_sub_field('titulo'); ?>">
+                                </div>
+
+                                <div class="description">
+                                    <h3><?php the_sub_field('titulo'); ?></h3>
+                                    <div class="text">
+                                        <?php the_sub_field('texto'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endwhile; else : endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section__faixa__pagamento">
+                <div class="shell">
+                    <div class="content__faixa__pagamento">
+                        <div class="texto__pagamento">
+                            <h2><?php the_field('titulo_pagamento'); ?></h2>
+                            <div class="text">
+                                <?php the_field('texto_pagamento'); ?>
+                            </div>
+                        </div>
+
+                        <div class="texto__informacoes">
+                            <h2><?php the_field('titulo_outras_informacoes'); ?></h2>
+                            <ul>
+                                <?php if(have_rows('informacoes')): while(have_rows('informacoes')) : the_row(); ?>
+                                <li><?php the_sub_field('texto'); ?></li>
+                                <?php endwhile; else : endif; ?>
+                            </ul>
                         </div>
                     </div>
                 </div>

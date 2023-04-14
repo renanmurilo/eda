@@ -1,62 +1,32 @@
 <!DOCTYPE html>
-<!-- saved from url=(0037)http://impeda.com.br/fornos-e-tornos/ -->
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" style="">
+<html>
    <!--<![endif]-->
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Importadora EDA |   FORNOS E TORNOS</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <meta name="robots" content="index,follow">
+      <link href="http://impeda.com.br/wp-content/themes/eda/favicon.ico" rel="shortcut icon" type="image/x-icon">
+      <!-- <link rel="stylesheet" href="http://impeda.com.br/wp-content/themes/eda/style.css"> -->
+      <!-- <link rel="stylesheet" href="http://impeda.com.br/wp-content/themes/eda/lightbox.css" /> -->
+      <!-- <link rel="stylesheet" href="http://impeda.com.br/wp-content/themes/eda/mobile.css" /> -->
+      <link rel="stylesheet" type="text/css" href="./Importadora EDA _ FORNOS E TORNOS_files/3wnw5.css" media="all">
+      <script async="" src="./Importadora EDA _ FORNOS E TORNOS_files/analytics.js.download"></script><script src="./Importadora EDA _ FORNOS E TORNOS_files/3wnw5.js.download" type="text/javascript"></script>
+      <!-- <script src="http://impeda.com.br/wp-content/themes/eda/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> -->
+   </head>
    <body class="page-template-default page page-id-2847 page-parent cstmsrch_www.impeda.com.br elementor-default">
-      <style>
-         .top-box{
-         margin-top:30px;
-         margin-botton:30px;
-         }
-         .box{
-         width:75%;
-         height:40px; 
-         background:#f1f2f2;
-         }
-         .box2{
-         width:60%;
-         height:40px; 
-         background:#f1f2f2;
-         }
-         .box3{
-         width:60%;
-         height:40px; 
-         background:#f1f2f2;
-         }
-         @media only screen and (max-width: 600px) {
-         .box{
-         width:100%;
-         height:60px; 
-         background:#f1f2f2;
-         }
-         .box2{
-         width:100%;
-         height:60px; 
-         background:#f1f2f2;
-         }
-         .box3{
-         width:100%;
-         height:60px; 
-         background:#f1f2f2;
-         }
-         .top-box{
-         margin-top:30px;
-         margin-botton:30px;
-         }
-         .btn{
-         width:100%;
-         }
-         }
-      </style>
-      <script src="https://kit.fontawesome.com/e7f28a2341.js"></script>
-      <style>
-         .text-dark{  color:#000;  }
-         .fas{ padding:15px;  }
-         .form-control{margin-bottom:50px}
-      </style>
-      
       <div class="main">
          <div class="container">
+            <br>
+            <div class="six columns text-center-mb">
+               <h1>2ª Via de Boleto(s)</h1>
+            </div>
+            <div class="six columns"></div>
+            <hr>
+            <br>
+
             <div class="eight columns offset-by-one">
                <?php
                   if(isset($_GET['baixar'])) {
@@ -164,7 +134,7 @@
                <br>
                </script> <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR"></script>
                <div class="top-box form-control">
-                  <form action="lista.php" method="POST">
+                  <form action="<?php echo get_home_url(); ?>/boleto/lista.php" method="POST">
                      <div class="top-box">
                         <label>CPF ou CNPJ:</label> 
                         <input id="CPF" name="cpf" type="text" maxlength="14" onkeyup="somenteNumeros(this);" class="box" required>
@@ -173,10 +143,7 @@
                         <label>Número da nota:</label> 
                         <input  name="num_nota" type="text" maxlength="11" class="box2" required>
                      </div>
-                     <!--<div class="top-box">
-                        <label>Data da Emissão:</label> 
-                        <input  name="data_emissao" type="date" class="box3" required>
-                        </div>-->
+
                      <div class="top-box">
                         <div class="g-recaptcha " data-sitekey="6Lc4B8sUAAAAAOIbdJNghVCLWQlh9GZyBwqSy1at">&nbsp;</div>
                      </div>
@@ -198,39 +165,12 @@
                </script>
             </div>
          </div>
+
       </div>
       <script src="./Importadora EDA _ FORNOS E TORNOS_files/jquery.min.js.download"></script>
       <script>window.jQuery || document.write('<script src="http://impeda.com.br/wp-content/themes/eda/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
       <script src="./Importadora EDA _ FORNOS E TORNOS_files/lightbox.min.js.download"></script>
       <script src="./Importadora EDA _ FORNOS E TORNOS_files/plugins.js.download"></script>
       <script src="./Importadora EDA _ FORNOS E TORNOS_files/main.js.download"></script>
-      <!-- FlexSlider -->
-      <script type="text/javascript">
-         $(window).load(function() {
-         $('.flexslider').flexslider({
-         animation: "slide",
-         prevText: "",
-         nextText: "",
-         controlNav: false,
-         animationLoop: false
-         });
-         });
-      </script>
-      <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
-      <div id="lightbox" class="lightbox" style="display: none;">
-         <div class="lb-outerContainer">
-            <div class="lb-container">
-               <img class="lb-image" src="http://impeda.com.br/fornos-e-tornos/">
-               <div class="lb-nav"><a class="lb-prev" href="http://impeda.com.br/fornos-e-tornos/"></a><a class="lb-next" href="http://impeda.com.br/fornos-e-tornos/"></a></div>
-               <div class="lb-loader"><a class="lb-cancel"></a></div>
-            </div>
-         </div>
-         <div class="lb-dataContainer">
-            <div class="lb-data">
-               <div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
-               <div class="lb-closeContainer"><a class="lb-close"></a></div>
-            </div>
-         </div>
-      </div>
    </body>
 </html>

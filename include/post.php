@@ -1,7 +1,10 @@
 <div class="card">
     <a href="<?php the_permalink(); ?>">
         <div class="image">
-            <img src="<?php the_field('imagem'); ?>" alt="<?php the_title(); ?>">
+            <?php $rows = get_field('imagens_do_produto');
+                $first_row = $rows[0]; 
+            ?>
+            <img src="<?php print_r($first_row['imagem']); ?>" alt="<?php the_title(); ?>">
         </div>
 
         <div class="description">

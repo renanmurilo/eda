@@ -8,6 +8,13 @@ get_header();
                 <div class="content__banner">
                     <img src="<?php the_field('imagem_desktop'); ?>" alt="<?php the_title(); ?>" class="image__desktop">
                     <img src="<?php the_field('imagem_mobile'); ?>" alt="<?php the_title(); ?>" class="image__mobile">
+
+                    <div class="description">
+                        <h2><?php the_field('titulo_banner'); ?></h2>
+                        <div class="text">
+                            <?php the_field('texto_banner'); ?>
+                        </div>
+                    </div>
                 </div>
             </section>
 

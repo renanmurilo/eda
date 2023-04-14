@@ -28,7 +28,7 @@ get_header();
                                 $args = array (
                                     'post_type' => 'forno',
                                     'order' => 'DESC',
-                                    'showposts' => 16,
+                                    'showposts' => 20,
                                 );
                                 $the_query = new WP_Query ( $args );
                             ?>
@@ -55,14 +55,12 @@ get_header();
                             <table>
                                 <thead>
                                     <th>Modelo</th>
-                                    <th>Automático <br>Km</th>
-                                    <th>Touch kmt</th>
-                                    <th>Cone</th>
-                                    <th>Temp ºC</th>
-                                    <th>Diâmetro <br> Interno (Cm)</th>
-                                    <th>Altura Interna (Cm)</th>
-                                    <th>Kit prateleira</th>
-                                    <th>Espessura <br>prateleira</th>
+                                    <th>Automático <br>(KM)</th>
+                                    <th>Touch <br>(KMT)</th>
+                                    <th>Temperatura <br>Máxima</th>
+                                    <th>Diâmetro <br>Interno</th>
+                                    <th>Altura <br>Interna</th>
+                                    <th>Kit de <br>prateleiras</th>
                                 </thead>
 
                                 <tbody>
@@ -71,12 +69,10 @@ get_header();
                                         <td><a href="<?php the_sub_field('link_do_produto'); ?>"><?php the_sub_field('modelo'); ?></a></td>
                                         <td><?php the_sub_field('automatico_km'); ?></td>
                                         <td><?php the_sub_field('touch_kmt'); ?></td>
-                                        <td><?php the_sub_field('cone'); ?></td>
-                                        <td><?php the_sub_field('temp_ºc'); ?></td>
+                                        <td><?php the_sub_field('temperatura_maxima'); ?></td>
                                         <td><?php the_sub_field('diametro_interno_cm'); ?></td>
                                         <td><?php the_sub_field('altura_interna_cm'); ?></td>
                                         <td><?php the_sub_field('kit_prateleira'); ?></td>
-                                        <td><?php the_sub_field('espessura_prateleira'); ?></td>
                                     </tr>
                                     <?php endwhile; else : endif; ?>
                                 </tbody>

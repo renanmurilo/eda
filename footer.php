@@ -10,10 +10,6 @@
                         </div>
 
                         <div class="icons">
-                            <a href="https://www.linkedin.com/company/importadoraeda" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
-                            </a>
-
                             <a href="https://www.facebook.com/impeda/" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
@@ -21,23 +17,27 @@
                             <a href="https://www.instagram.com/eda_importadora/" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Instagram">
                             </a>
+							
+                            <a href="https://www.linkedin.com/company/importadoraeda" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
+                            </a>
                         </div>
                     </div>
                     
                     <div class="sociais__mobile__skutt">
                         <div class="logo__skutt">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/logo-skutt.svg" alt="Skutt">
-                        </div>
-
-                        <div class="icons">
-                            <a href="" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Linkedin">
-                            </a>
-
-                            <a href="" target="_blank" rel="noopener noreferrer">
+                        </div>                     
+						
+						<div class="icons">
+                            <a href="https://www.facebook.com/skutt.Brasil" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
+                            <a href="https://www.instagram.com/skutt.brasil/" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Linkedin">
+                            </a>
                         </div>
+						
                     </div>
 
                     <div class="menu__footer">
@@ -53,16 +53,12 @@
                             <li class="item__menu">
                                 <a href="<?php echo get_home_url(); ?>/politica-de-privacidade">Política de privacidade</a>
                             </li>
-
-                            <li class="item__menu">
-                                <a href="<?php echo get_home_url(); ?>/termos-de-uso">Termos de uso</a>
-                            </li>
                         </ul>
 
                         <div class="contato">
                             <h3>Contato</h3>
 
-                            <a href="tel:+551133111990" class="link">+ 55 11 3311-1990</a>
+                            <a href="tel:+551133111990" class="link">+55 11 3311-1990</a>
                             <a href="mailto:impeda@impeda.com.br" class="link">impeda@impeda.com.br</a>
                         </div>
                     </div>
@@ -75,12 +71,11 @@
                         </div>
 
                         <div class="icons">
+                            <a href="https://www.facebook.com/skutt.Brasil" target="_blank" rel="noopener noreferrer">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
+                            </a>
                             <a href="https://www.instagram.com/skutt.brasil/" target="_blank" rel="noopener noreferrer">
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Linkedin">
-                            </a>
-
-                            <a href="https://www.facebook.com/Skutt.Inc" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Facebook">
                             </a>
                         </div>
                     </div>

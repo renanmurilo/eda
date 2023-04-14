@@ -53,10 +53,9 @@ get_header(); ?>
                         <div class="image">
                             <img src="<?php the_sub_field('imagem'); ?>" alt="">
 
-                        <div class="icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down-white.svg" alt="icon">
-                        </div>
-                        
+                            <a href="<?php the_sub_field('imagem'); ?>" download class="icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down.svg" alt="icon">
+                            </a>
                         </div>
                     <?php endwhile; else : endif; ?>
                 </div>

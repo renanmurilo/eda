@@ -7,10 +7,18 @@ get_header();
             <section class="section__fornos__e__tornos__banner">
                 <div class="content__banner slide-banners">
                     <?php if(have_rows('banners')): while(have_rows('banners')) : the_row(); ?>
-                        <a href="<?php echo get_home_url(); ?><?php the_sub_field('link_do_banner'); ?>" class="banner__image">
+                        <div class="banner__image">
                             <img class="banner__desktop" src="<?php the_sub_field('imagem_desktop'); ?>" alt="">
                             <img class="banner__mobile" src="<?php the_sub_field('imagem_mobile'); ?>" alt="">
-                        </a>
+
+                            <div class="description">
+                                <h3><?php the_sub_field('pre_titulo'); ?></h3>
+                                <h1><?php the_sub_field('titulo'); ?></h1>
+                                <div class="text"><?php the_sub_field('texto'); ?></div>
+
+                                <a href="<?php the_sub_field('link_do_banner'); ?>" class="btn btn__black">Saiba mais</a>
+                            </div>
+                        </div>
                     <?php endwhile; else : endif; ?>
                 </div>
             </section>

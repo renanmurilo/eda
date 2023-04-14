@@ -29,8 +29,25 @@ get_header(); ?>
         <section class="section__dados">
             <div class="shell">
                 <div class="content__dados">
-                    <div class="image">
-                        <img src="<?php the_field('imagem'); ?>" alt="<?php the_title(); ?>">
+                    <div class="galeria">
+                        <div class="thumbs">
+                            <?php if(have_rows('imagens_do_produto')): while(have_rows('imagens_do_produto')) : the_row(); ?>
+                                <div class="image">
+                                    <img src="<?php the_sub_field('imagem'); ?>" alt="">
+                                </div>
+                            <?php endwhile; else : endif; ?>
+                        </div>
+
+                        <div class="image__large">
+                            <?php $rows = get_field('imagens_do_produto');
+                                $first_row = $rows[0]; 
+                            ?>
+                            <img src="<?php print_r($first_row['imagem']); ?>" alt="" id="current">
+
+                            <a href="<?php print_r($first_row['imagem']); ?>"" download class="icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/ico-down.svg" alt="icon">
+                            </a>
+                        </div>
                     </div>
 
                     <aside class="aside__bar">
@@ -39,8 +56,6 @@ get_header(); ?>
                         <div class="text">
                             <?php the_field('texto_descritivo'); ?>
                         </div>
-
-                        <a href="" class="link">Ver Mais</a>
                     </aside>
                 </div>
             </div>
